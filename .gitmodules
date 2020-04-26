@@ -1,0 +1,3 @@
+[submodule "Site/QuasarAppLib"]
+	path = Site/QuasarAppLib
+	url = https://github.com/QuasarApp/QuasarAppLib.git

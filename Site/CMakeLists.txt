@@ -1,44 +1,39 @@
+#
+# Copyright (C) 2018-2020 QuasarApp.
+# Distributed under the lgplv3 software license, see the accompanying
+# Everyone is permitted to copy and distribute verbatim copies
+# of this license document, but changing it is not allowed.
+#
+
 cmake_minimum_required(VERSION 3.5)
 
-project(DocsSyte LANGUAGES CXX)
+project(Site LANGUAGES CXX)
+if(TARGET ${PROJECT_NAME})
+  message("The ${PROJECT_NAME} arledy included in main Project")
+  return()
+endif()
+
+add_subdirectory(QuasarAppLib)
+
+include(QuasarAppLib/CMake/ProjectOut.cmake)
+include(QuasarAppLib/CMake/Version.cmake)
+
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
-set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# QtCreator supports the following variables for Android, which are identical to qmake Android variables.
-# Check http://doc.qt.io/qt-5/deployment-android.html for more information.
-# They need to be set before the find_package(Qt5 ...) call.
-
-#if(ANDROID)
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
-#    if (ANDROID_ABI STREQUAL "armeabi-v7a")
-#        set(ANDROID_EXTRA_LIBS
-#            ${CMAKE_CURRENT_SOURCE_DIR}/path/to/libcrypto.so
-#            ${CMAKE_CURRENT_SOURCE_DIR}/path/to/libssl.so)
-#    endif()
-#endif()
 
 find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 
-if(ANDROID)
-    add_library(DocsSyte SHARED
-      main.cpp
-      qml.qrc
-    )
-else()
-    add_executable(DocsSyte
-      main.cpp
-      qml.qrc
-    )
-endif()
+file(GLOB SOURCE_CPP
+    "src/*.cpp"
+    "src/*.qrc"
 
-target_compile_definitions(DocsSyte
-  PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
-target_link_libraries(DocsSyte
-  PRIVATE Qt5::Core Qt5::Quick)
+)
+
+add_executable(${PROJECT_NAME} ${SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Quick QuasarApp)
+target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
+target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src/Private")

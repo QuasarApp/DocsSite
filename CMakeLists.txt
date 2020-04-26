@@ -7,12 +7,12 @@
 
 cmake_minimum_required(VERSION 3.5)
 
-include(Patronum/QuasarAppLib/CMake/ccache.cmake)
+include(Site/QuasarAppLib/CMake/ccache.cmake)
 # Add sub directories
 add_subdirectory(Site)
 
-include(Patronum/QuasarAppLib/CMake/QuasarAppCITargets.cmake)
+include(Site/QuasarAppLib/CMake/QuasarAppCITargets.cmake)
 
-addDoc("Patronum" ${CMAKE_CURRENT_SOURCE_DIR}/doxygen.conf)
+#addDoc("Patronum" ${CMAKE_CURRENT_SOURCE_DIR}/doxygen.conf)
 
 initAll()
