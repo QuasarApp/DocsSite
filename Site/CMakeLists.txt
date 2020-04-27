@@ -14,6 +14,7 @@ if(TARGET ${PROJECT_NAME})
 endif()
 
 add_subdirectory(QuasarAppLib)
+add_subdirectory(ViewSolutions)
 
 include(QuasarAppLib/CMake/ProjectOut.cmake)
 include(QuasarAppLib/CMake/Version.cmake)

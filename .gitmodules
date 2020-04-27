@@ -1,3 +1,6 @@
 [submodule "Site/QuasarAppLib"]
 	path = Site/QuasarAppLib
 	url = https://github.com/QuasarApp/QuasarAppLib.git
+[submodule "Site/ViewSolutions"]
+	path = Site/ViewSolutions
+	url = https://github.com/QuasarApp/ViewSolutions.git
