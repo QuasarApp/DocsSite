@@ -4,6 +4,7 @@
         <file>View/Header.qml</file>
     </qresource>
     <qresource prefix="/img">
-        <file>images/HanoiLogoAlpha.png</file>
+        <file>images/HanoiTowers.png</file>
+        <file>images/LOGO.png</file>
     </qresource>
 </RCC>

@@ -26,7 +26,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt5 COMPONENTS Core Quick REQUIRED)
+find_package(Qt5 COMPONENTS Core REQUIRED)
 
 file(GLOB SOURCE_CPP
     "src/*.cpp"
@@ -35,6 +35,6 @@ file(GLOB SOURCE_CPP
 )
 
 add_executable(${PROJECT_NAME} ${SOURCE_CPP})
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Quick ViewSolutions QuasarApp)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core ViewSolutions QuasarApp)
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src/Private")
