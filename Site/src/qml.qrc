@@ -6,5 +6,8 @@
     <qresource prefix="/img">
         <file>images/HanoiTowers.png</file>
         <file>images/LOGO.png</file>
+        <file>images/CQtDeployer logo.png</file>
+        <file>images/QtBigint Logo.png</file>
+        <file>images/Qt-Secret Logo.png</file>
     </qresource>
 </RCC>

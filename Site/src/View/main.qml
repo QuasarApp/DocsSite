@@ -11,6 +11,12 @@ ApplicationWindow {
     height: 480
     title: qsTr("Hello World")
 
+    Material.theme: Material.System
+    Material.accent: Material.LightBlue
+//    Material.background: Material.Teal
+//    Material.foreground: Material.Pink
+    Material.primary: Material.Teal
+
     header: Header {
         height: root.height * 0.2
     }
