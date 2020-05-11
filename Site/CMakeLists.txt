@@ -15,6 +15,7 @@ endif()
 
 add_subdirectory(QuasarAppLib)
 add_subdirectory(ViewSolutions)
+add_subdirectory(BaseFront)
 
 include(QuasarAppLib/CMake/ProjectOut.cmake)
 include(QuasarAppLib/CMake/Version.cmake)
