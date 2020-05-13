@@ -11,7 +11,7 @@ ApplicationWindow {
     height: 480
     title: qsTr("Hello World")
 
-    Material.theme: Material.System
+    Material.theme: Material.Light
     Material.accent: Material.LightBlue
 //    Material.background: Material.Teal
 //    Material.foreground: Material.Pink
@@ -19,6 +19,23 @@ ApplicationWindow {
 
     header: Header {
         height: root.height * 0.2
+
+        onCurrentPageChanged: {
+            mainModel.openPage(currentPage);
+        }
+    }
+
+    contentData: StackView {
+        id: stackView
+        initialItem: ListViewer {
+            id: sourceList
+            model: mainModel.listModel
+
+            anchors.fill: parent
+
+        }
+        anchors.fill: parent
+
     }
 
 }

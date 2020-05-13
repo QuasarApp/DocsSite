@@ -2,7 +2,7 @@
     <qresource prefix="/">
         <file>View/main.qml</file>
         <file>View/Header.qml</file>
-        <file>View/Home.qml</file>
+        <file>View/ListViewer.qml</file>
     </qresource>
     <qresource prefix="/img">
         <file>images/HanoiTowers.png</file>
@@ -10,5 +10,10 @@
         <file>images/CQtDeployer logo.png</file>
         <file>images/QtBigint Logo.png</file>
         <file>images/Qt-Secret Logo.png</file>
+    </qresource>
+    <qresource prefix="/sources">
+        <file>html/QuasarAppAbout.htm</file>
+        <file>html/QuasarAppLinks.htm</file>
+        <file>html/QuasarAppRequest.htm</file>
     </qresource>
 </RCC>

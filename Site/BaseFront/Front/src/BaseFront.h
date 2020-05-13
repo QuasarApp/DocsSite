@@ -13,9 +13,16 @@
 class QQmlApplicationEngine;
 
 /**
- * @brief The BaseFront namespace - contains base frontend solutions for create sites and applications
+ * @brief The BaseFront namespace - Сontains base FrontEnd solutions for create sites and applications.
+ *  After init in qml available next instances:
+ *  - pageReader - see more information in Reader.
  */
 namespace BaseFront {
+    /**
+     * @brief init - init all instances of this library.
+     * @param engine - qml engine
+     * @return - true if the function finished is seccussful.
+     */
     bool init(QQmlApplicationEngine *engine);
 };
 #endif // BaseFront_H
