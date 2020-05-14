@@ -3,6 +3,7 @@
         <file>View/main.qml</file>
         <file>View/Header.qml</file>
         <file>View/ListViewer.qml</file>
+        <file>View/Languages.qml</file>
     </qresource>
     <qresource prefix="/img">
         <file>images/HanoiTowers.png</file>
@@ -11,6 +12,8 @@
         <file>images/QtBigint Logo.png</file>
         <file>images/Qt-Secret Logo.png</file>
         <file>images/os.png</file>
+        <file>images/EN.png</file>
+        <file>images/RU.png</file>
     </qresource>
     <qresource prefix="/sources">
         <file>html/QuasarAppAbout.htm</file>

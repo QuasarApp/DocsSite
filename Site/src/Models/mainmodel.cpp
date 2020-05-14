@@ -1,5 +1,6 @@
 #include "mainmodel.h"
 #include "reader.h"
+#include <quasarapp.h>
 
 MainModel::MainModel(QObject *parent) : QObject(parent) {
     setListModel(new BaseFront::ListViewModel(this));
@@ -14,6 +15,27 @@ bool MainModel::openPage(const QString &url) {
     }
 
     return false;
+}
+
+void MainModel::changeLanguage(int code) {
+
+    QString prefix = "Translations";
+
+    switch (static_cast<Languages>(code)) {
+
+    case Languages::EN: {
+        QuasarAppUtils::Locales::setLocale(prefix, "en");
+        break;
+    }
+
+    case Languages::RU: {
+        QuasarAppUtils::Locales::setLocale(prefix, "ru");
+        break;
+    }
+
+    default:
+        QuasarAppUtils::Locales::setLocale(prefix);
+    }
 }
 
 QObject *MainModel::listModel() const {

@@ -4,6 +4,11 @@
 #include <QObject>
 #include <listviewmodel.h>
 
+enum class Languages {
+    EN,
+    RU
+};
+
 class MainModel : public QObject
 {
     Q_OBJECT
@@ -13,6 +18,7 @@ class MainModel : public QObject
 public:
     explicit MainModel(QObject *parent = nullptr);
     Q_INVOKABLE bool openPage(const QString& url);
+    Q_INVOKABLE void changeLanguage(int code);
 
     QObject* listModel() const;
 

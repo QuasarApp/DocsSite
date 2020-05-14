@@ -7,8 +7,8 @@ import ViewSolutionsModule 1.0
 ApplicationWindow {
     id: applicationRoot
     visible: true
-    width: 640
-    height: 480
+    width: 1280
+    height: 720
     title: qsTr("Hello World")
 
     Material.theme: Material.Light

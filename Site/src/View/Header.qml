@@ -86,11 +86,18 @@ ToolBar {
 
         }
 
-        Switch {
-            text: qsTr("Dark Mode")
+        ColumnLayout {
+            Languages {
+                Layout.fillHeight: true
+                itemHeigh: privateRoot.height * 0.4
+            }
 
-            onCheckedChanged: {
-                applicationRoot.Material.theme = (checked)? Material.Dark: Material.Light
+            Switch {
+                text: qsTr("Dark Mode")
+
+                onCheckedChanged: {
+                    applicationRoot.Material.theme = (checked)? Material.Dark: Material.Light
+                }
             }
         }
 
