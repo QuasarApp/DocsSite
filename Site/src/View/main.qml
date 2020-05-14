@@ -5,7 +5,7 @@ import QtQuick.Controls.Material 2.14
 import ViewSolutionsModule 1.0
 
 ApplicationWindow {
-    id: root
+    id: applicationRoot
     visible: true
     width: 640
     height: 480

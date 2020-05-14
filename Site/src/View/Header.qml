@@ -86,6 +86,14 @@ ToolBar {
 
         }
 
+        Switch {
+            text: qsTr("Dark Mode")
+
+            onCheckedChanged: {
+                applicationRoot.Material.theme = (checked)? Material.Dark: Material.Light
+            }
+        }
+
         anchors.fill: parent
     }
 
