@@ -7,29 +7,26 @@ BaseListModel::BaseListModel(QObject *ptr):
 }
 
 bool BaseListModel::canFetchMore(const QModelIndex &) const {
-    if (_itemCount != rowCount())
-        return true;
-    else
-        return false;
+    return false /*_itemCount != rowCount()*/;
 }
 
 void BaseListModel::fetchMore(const QModelIndex &) {
-    int remainder = rowCount() - _itemCount;
-    int itemsToFetch = qMin(100, remainder);
+//    int remainder = rowCount() - _itemCount;
+//    int itemsToFetch = qMin(100, remainder);
 
-    if (itemsToFetch < 0) {
-        beginRemoveRows(QModelIndex(), 0, 0 - itemsToFetch - 1 );
+//    if (itemsToFetch < 0) {
+//        beginRemoveRows(QModelIndex(), 0, 0 - itemsToFetch - 1 );
 
-        _itemCount += itemsToFetch;
+//        _itemCount += itemsToFetch;
 
-        endRemoveRows();
-    } else if (itemsToFetch > 0) {
-        beginInsertRows(QModelIndex(), _itemCount, _itemCount + itemsToFetch - 1);
+//        endRemoveRows();
+//    } else if (itemsToFetch > 0) {
+//        beginInsertRows(QModelIndex(), _itemCount, _itemCount + itemsToFetch - 1);
 
-        _itemCount += itemsToFetch;
+//        _itemCount += itemsToFetch;
 
-        endInsertRows();
-    }
+//        endInsertRows();
+//    }
 
 }
 }

@@ -10,21 +10,27 @@ ListView {
     id: viewPort
     property real globalPos: 0
     anchors.fill: parent
+    anchors.margins: 40
     delegate: Component {
         ViewPortPage {
-            viewPortDelegatH: viewPort.height * 0.8
+            property var data: block
             scrollPos: viewPort.globalPos
-            source:  modelData
+            source:  (data)? data.bakcBroundPicture: ""
             viewground: viewPort
-            title: titleTxt
-            text: sourceTxt
+            title: (data)? data.title: ""
+            text: (data)? data.sourceText: ""
+            textMargins: 40
         }
     }
+
+    spacing: 10
 
     ScrollBar.vertical: ScrollBar {
         onPositionChanged: {
             viewPort.globalPos = position
         }
+        visible: false
+
     }
 
 }

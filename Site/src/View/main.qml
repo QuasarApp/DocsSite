@@ -15,10 +15,10 @@ ApplicationWindow {
     Material.accent: Material.LightBlue
 //    Material.background: Material.Teal
 //    Material.foreground: Material.Pink
-    Material.primary: Material.Teal
+    Material.primary: Material.Grey
 
     header: Header {
-        height: root.height * 0.2
+        height: 30 * Screen.pixelDensity
 
         onCurrentPageChanged: {
             mainModel.openPage(currentPage);

@@ -2,6 +2,8 @@
 #include <QQmlApplicationEngine>
 #include <QQuickStyle>
 #include <QQmlContext>
+#include <QFont>
+#include <QFontDatabase>
 
 #include <BaseFront.h>
 #include <viewsolutions.h>
@@ -14,9 +16,14 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
+    int id = QFontDatabase::addApplicationFont(":/fonts/fonts/Lato-Regular.ttf");
+    QFont appFont(QFontDatabase::applicationFontFamilies(id).at(0));
+    app.setFont(appFont);
+
     QQuickStyle::setStyle("Material");
 
     QQmlApplicationEngine engine;
+
     if (!ViewSolutions::init(&engine)) {
         return -1;
     }

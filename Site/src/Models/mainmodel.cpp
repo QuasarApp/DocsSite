@@ -40,8 +40,33 @@ void MainModel::initQuasarApp() {
     _QuasarAppPage->push_back(block);
 
     block->setTitle(tr("QuasarApp Group"));
-    block->setSourceText(BaseFront::Reader::instance()->read(":/sources/html/QuasarAppAbout.htm"));
-    block->setBakcBroundPicture(":/img/images/LOGO.png");
+
+    QString sourceText = tr("The <b>QuasarApp</b> is developing open source mobile and desktop applications.<br><br>"
+                            "Our company has ben created on 2017 yahr and have experians of develepment android and desctop applications and games."
+                            "<br><br>");
+
+    sourceText += tr("During our existence, we have accumulated more than 40 software components and ready-made solutions for the most diverse tasks.<br>"
+                     "This approach allows us now to create final products with impressive speed. If you have an idea for the application, we will hear you."
+                     "<br><br>");
+
+    block->setSourceText(sourceText);
+    block->setBakcBroundPicture("qrc:/img/images/LOGO.png");
+
+
+    block = new BaseFront::InfoBlock(this);
+    _QuasarAppPage->push_back(block);
+
+    block->setTitle(tr("QuasarApp Group"));
+
+    sourceText = tr("At the moment, we can offer support for our solutions for the following platforms:<br><br>");
+
+    sourceText += tr("- <i> Linux </i><br>"
+                     "- <i> Windows </i><br>"
+                     "- <i> Android </i><br>"
+                     "- <i> Web </i><br>");
+
+    block->setSourceText(sourceText);
+    block->setBakcBroundPicture("qrc:/img/images/os.png");
 
 
 }

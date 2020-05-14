@@ -10,10 +10,15 @@
         <file>images/CQtDeployer logo.png</file>
         <file>images/QtBigint Logo.png</file>
         <file>images/Qt-Secret Logo.png</file>
+        <file>images/os.png</file>
     </qresource>
     <qresource prefix="/sources">
         <file>html/QuasarAppAbout.htm</file>
         <file>html/QuasarAppLinks.htm</file>
         <file>html/QuasarAppRequest.htm</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file>fonts/Roboto-Regular.ttf</file>
+        <file>fonts/Lato-Regular.ttf</file>
     </qresource>
 </RCC>
