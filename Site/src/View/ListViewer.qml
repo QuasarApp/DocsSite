@@ -9,8 +9,12 @@ import ViewSolutionsModule 1.0
 ListView {
     id: viewPort
     property real globalPos: 0
-    anchors.fill: parent
-    anchors.margins: 40
+
+
+
+    anchors.margins: 24
+    anchors.leftMargin: 40
+    anchors.rightMargin: 40
     delegate: Component {
         ViewPortGradientPage {
             property var data: block
@@ -24,7 +28,7 @@ ListView {
         }
     }
 
-    spacing: 10
+    spacing: 24
 
     ScrollBar.vertical: ScrollBar {
         onPositionChanged: {

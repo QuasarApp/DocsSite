@@ -15,7 +15,7 @@ ApplicationWindow {
     Material.accent: Material.LightBlue
 //    Material.background: Material.Teal
 //    Material.foreground: Material.Pink
-    Material.primary: Material.Grey
+    Material.primary: "#404142"
 
     header: Header {
         height: 30 * Screen.pixelDensity
@@ -31,11 +31,12 @@ ApplicationWindow {
         initialItem: ListViewer {
             id: sourceList
             model: (mainModel)? mainModel.listModel: null
-
             anchors.fill: parent
-
         }
-        anchors.fill: parent
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        width: Math.min(parent.width, 1200)
 
     }
 
