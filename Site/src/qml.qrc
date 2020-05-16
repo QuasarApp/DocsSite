@@ -14,6 +14,8 @@
         <file>images/os.png</file>
         <file>images/EN.png</file>
         <file>images/RU.png</file>
+        <file>images/crossplatforms.png</file>
+        <file>images/startup.png</file>
     </qresource>
     <qresource prefix="/sources">
         <file>html/QuasarAppAbout.htm</file>

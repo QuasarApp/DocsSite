@@ -37,12 +37,12 @@
 <context>
     <name>Languages</name>
     <message>
-        <location filename="../View/Languages.qml" line="26"/>
+        <location filename="../View/Languages.qml" line="22"/>
         <source>Select English language</source>
         <translation>Выберите английский язык</translation>
     </message>
     <message>
-        <location filename="../View/Languages.qml" line="39"/>
+        <location filename="../View/Languages.qml" line="35"/>
         <source>Select Russian language</source>
         <translation>Выбрать русский язык</translation>
     </message>

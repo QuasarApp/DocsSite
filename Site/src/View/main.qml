@@ -30,7 +30,7 @@ ApplicationWindow {
         id: stackView
         initialItem: ListViewer {
             id: sourceList
-            model: mainModel.listModel
+            model: (mainModel)? mainModel.listModel: null
 
             anchors.fill: parent
 

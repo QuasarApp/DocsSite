@@ -92,7 +92,7 @@ void MainModel::initQuasarApp() {
                      "- <i> Web </i>");
 
     block->setSourceText(sourceText);
-    block->setBakcBroundPicture("qrc:/img/images/os.png");
+    block->setBakcBroundPicture("qrc:/img/images/crossplatforms.png");
 
     block = new BaseFront::InfoBlock(this);
     _QuasarAppPage->push_back(block);
@@ -110,7 +110,7 @@ void MainModel::initQuasarApp() {
                     "You can also request a private project exclusively for you, but such a project can no longer be free.");
 
     block->setSourceText(sourceText);
-    block->setBakcBroundPicture("qrc:/img/images/os.png");
+    block->setBakcBroundPicture("qrc:/img/images/startup.png");
 
 
 }
