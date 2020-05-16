@@ -19,6 +19,7 @@ ApplicationWindow {
 
     header: Header {
         height: 30 * Screen.pixelDensity
+        width: applicationRoot.width
 
         onCurrentPageChanged: {
             mainModel.openPage(currentPage);

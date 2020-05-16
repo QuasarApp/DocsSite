@@ -12,11 +12,12 @@ ListView {
     anchors.fill: parent
     anchors.margins: 40
     delegate: Component {
-        ViewPortPage {
+        ViewPortGradientPage {
             property var data: block
             scrollPos: viewPort.globalPos
             source:  (data)? data.bakcBroundPicture: ""
-            viewground: viewPort
+            viewPortDelegatW: viewPort.width
+            viewground: viewgroundItem
             title: (data)? data.title: ""
             text: (data)? data.sourceText: ""
             textMargins: 40
@@ -30,6 +31,15 @@ ListView {
             viewPort.globalPos = position
         }
         visible: false
+
+    }
+
+    Item{
+        id: viewgroundItem
+        anchors.left: parent.horizontalCenter
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
 
     }
 

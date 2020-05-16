@@ -19,6 +19,7 @@ add_subdirectory(BaseFront)
 
 include(QuasarAppLib/CMake/ProjectOut.cmake)
 include(QuasarAppLib/CMake/Version.cmake)
+include(QuasarAppLib/CMake/tr.cmake)
 
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -27,14 +28,20 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt5 COMPONENTS Core REQUIRED)
+find_package(Qt5 COMPONENTS Core LinguistTools REQUIRED)
 
 file(GLOB SOURCE_CPP
     "src/*.cpp"
     "src/Models/*.cpp"
     "src/*.qrc"
-
 )
+set(TS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/translations")
+
+set(TS_FILES
+    "${TS_DIR}/${PROJECT_NAME}_ru_RU.ts"
+)
+
+prepareQM(${CMAKE_SOURCE_DIR} ${TS_FILES})
 
 if(ANDROID)
     add_library(${PROJECT_NAME} SHARED ${SOURCE_CPP})
@@ -48,3 +55,4 @@ target_compile_definitions(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core ViewSolutions QuasarApp BaseFront)
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src/Models")
+

@@ -10,8 +10,6 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
-#include "reader.h"
-
 bool BaseFront::init(QQmlApplicationEngine *engine) {
     if (!engine)
         return false;
@@ -21,8 +19,6 @@ bool BaseFront::init(QQmlApplicationEngine *engine) {
     if (!root)
         return false;
     engine->addImportPath(":/");
-
-    root->setContextProperty("pageReader", QVariant::fromValue(Reader::instance()));
 
     return true;
 }

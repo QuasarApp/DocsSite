@@ -24,12 +24,16 @@ void MainModel::changeLanguage(int code) {
     switch (static_cast<Languages>(code)) {
 
     case Languages::EN: {
-        QuasarAppUtils::Locales::setLocale(prefix, "en");
+        if (!QuasarAppUtils::Locales::setLocale(QLocale::Language::English, "Site")) {
+            QuasarAppUtils::Params::log("set language failed!");
+        }
         break;
     }
 
     case Languages::RU: {
-        QuasarAppUtils::Locales::setLocale(prefix, "ru");
+        if (!QuasarAppUtils::Locales::setLocale(QLocale::Language::Russian, "Site", "_", ":/translations/translations/")) {
+            QuasarAppUtils::Params::log("set language failed!");
+        }
         break;
     }
 

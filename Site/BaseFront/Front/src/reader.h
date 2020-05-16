@@ -18,8 +18,9 @@ namespace BaseFront {
  */
 class BASEFRONT_LIBRARYSHARED_EXPORT Reader
 {
-    Q_GADGET
 public:
+    Reader();
+
     /**
      * @brief read - read a source file
      * @param page - path to page
@@ -27,15 +28,7 @@ public:
      */
     Q_INVOKABLE QString read(const QString &page);
 
-    static Reader* instance();
-
-private:
-
-    Reader();
-
 };
 }
-
-Q_DECLARE_METATYPE(BaseFront::Reader*);
 
 #endif // READER_H

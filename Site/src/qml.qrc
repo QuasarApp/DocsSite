@@ -24,4 +24,7 @@
         <file>fonts/Roboto-Regular.ttf</file>
         <file>fonts/Lato-Regular.ttf</file>
     </qresource>
+    <qresource prefix="/translations">
+        <file>translations/Site_ru_RU.qm</file>
+    </qresource>
 </RCC>

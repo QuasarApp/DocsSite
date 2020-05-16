@@ -26,8 +26,4 @@ QString BaseFront::Reader::read(const QString &page) {
     return result;
 }
 
-Reader *Reader::instance() {
-    static auto instance = new Reader();
-    return instance;
-}
 }

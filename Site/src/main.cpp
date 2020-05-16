@@ -9,6 +9,7 @@
 #include <viewsolutions.h>
 
 #include "mainmodel.h"
+#include "quasarapp.h"
 
 int main(int argc, char *argv[])
 {
@@ -23,6 +24,10 @@ int main(int argc, char *argv[])
     QQuickStyle::setStyle("Material");
 
     QQmlApplicationEngine engine;
+
+    QObject::connect(QuasarAppUtils::Locales::instance(), &QuasarAppUtils::Locales::sigTranslationChanged,
+                     &engine, &QQmlApplicationEngine::retranslate);
+
 
     if (!ViewSolutions::init(&engine)) {
         return -1;

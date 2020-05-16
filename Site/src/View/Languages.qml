@@ -10,10 +10,6 @@ RowLayout {
     property int currentItem : 0;
     property int itemHeigh : root.parent.height * 0.4;
 
-    onHeightChanged: {
-        console.log(height)
-    }
-
     onCurrentItemChanged: {
         mainModel.changeLanguage(currentItem);
     }
@@ -35,7 +31,7 @@ RowLayout {
         background: (1 == root.currentItem)? Material.accent : "#00000000"
         Layout.preferredHeight: itemHeigh
         Layout.preferredWidth: itemHeigh
-        soucre : "qrc:/img/images/EN.png"
+        soucre : "qrc:/img/images/RU.png"
         toolTip: qsTr("Select Russian language");
         power: 1.9
 
