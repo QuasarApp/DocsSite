@@ -2,6 +2,7 @@
 #define MAINPAGE_H
 
 #include <QObject>
+#include <infoblock.h>
 #include <listviewmodel.h>
 
 enum class Languages {
@@ -31,8 +32,8 @@ signals:
 
 private:
     void initQuasarApp();
-    QList<BaseFront::InfoBlock*> * _QuasarAppPage = nullptr;
-    BaseFront::ListViewModel *_listModel = nullptr;
+    QList<QObject*> * _QuasarAppPage = nullptr;
+    ViewSolutions::ListViewModel *_listModel = nullptr;
 };
 
 #endif // MAINPAGE_H

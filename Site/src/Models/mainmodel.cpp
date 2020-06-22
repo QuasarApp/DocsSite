@@ -3,7 +3,7 @@
 #include <quasarapp.h>
 
 MainModel::MainModel(QObject *parent) : QObject(parent) {
-    setListModel(new BaseFront::ListViewModel(this));
+    setListModel(new ViewSolutions::ListViewModel(this));
     initQuasarApp();
 }
 
@@ -47,7 +47,7 @@ QObject *MainModel::listModel() const {
 }
 
 void MainModel::setListModel(QObject *listModel) {
-    auto model = dynamic_cast<BaseFront::ListViewModel*>(listModel);
+    auto model = dynamic_cast<ViewSolutions::ListViewModel*>(listModel);
     if (!model || _listModel == model)
         return;
 
@@ -60,7 +60,7 @@ void MainModel::initQuasarApp() {
         return;
     }
 
-    _QuasarAppPage = new QList<BaseFront::InfoBlock*>();
+    _QuasarAppPage = new QList<QObject*>();
 
     auto block = new BaseFront::InfoBlock(this);
     _QuasarAppPage->push_back(block);

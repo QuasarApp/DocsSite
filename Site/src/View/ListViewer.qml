@@ -17,7 +17,7 @@ ListView {
     anchors.rightMargin: 40
     delegate: Component {
         ViewPortGradientPage {
-            property var data: block
+            property var data: modelData
             scrollPos: viewPort.globalPos
             source:  (data)? data.bakcBroundPicture: ""
             viewPortDelegatW: viewPort.width
