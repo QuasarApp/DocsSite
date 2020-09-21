@@ -9,7 +9,7 @@ cmake_minimum_required(VERSION 3.5)
 
 include(../../Site/QuasarAppLib/CMake/ccache.cmake)
 # Add sub directories
-project(BaseFront LANGUAGES CXX)
+project(BaseFront)
 if(TARGET ${PROJECT_NAME})
   message("The ${PROJECT_NAME} arledy included in main Project")
   return()

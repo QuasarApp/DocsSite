@@ -7,7 +7,11 @@
 
 cmake_minimum_required(VERSION 3.5)
 
+set(BUILD_SHARED_LIBS ON)
+
 include(Site/QuasarAppLib/CMake/ccache.cmake)
+include(Site/QuasarAppLib/CMake/crossplatform/crossplatform.cmake)
+
 # Add sub directories
 add_subdirectory(Site)
 

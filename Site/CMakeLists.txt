@@ -7,11 +7,12 @@
 
 cmake_minimum_required(VERSION 3.5)
 
-project(Site LANGUAGES CXX)
+project(Site)
 if(TARGET ${PROJECT_NAME})
   message("The ${PROJECT_NAME} arledy included in main Project")
   return()
 endif()
+
 
 add_subdirectory(QuasarAppLib)
 add_subdirectory(ViewSolutions)
