@@ -18,7 +18,7 @@ ApplicationWindow {
     Material.primary: "#404142"
 
     header: Header {
-        height: 30 * Screen.pixelDensity
+        height: 50 * Screen.pixelDensity
         width: applicationRoot.width
 
         onCurrentPageChanged: {
