@@ -1,0 +1,11 @@
+{
+    "bin": [
+        "./build/Release/Site",
+        "./src/Wrapper/qtlogo.svg",
+        "./src/Wrapper/qtloader.js",
+        "./src/Wrapper/index.html"
+    ],
+    "binOut": "/",
+    "libOut": "/",
+    "targetDir": "./DeploymentSite"
+}
