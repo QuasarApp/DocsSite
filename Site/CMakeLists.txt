@@ -57,11 +57,4 @@ target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core ViewSolutions QuasarApp 
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src/Models")
 
-if (DEFINED TARGET_PLATFORM_TOOLCHAIN)
-    if (${TARGET_PLATFORM_TOOLCHAIN} STREQUAL "wasm32")
-        message(added deploy step for site)
-        set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "${PROJECT_NAME}.js")
-
-        addDeployFromFile(deployWasm.json)
-    endif(${TARGET_PLATFORM_TOOLCHAIN} STREQUAL "wasm32")
-endif(DEFINED TARGET_PLATFORM_TOOLCHAIN)
+initWasmSupport(${PROJECT_NAME} deployWasm.json)
