@@ -4,6 +4,7 @@
         <file>View/Header.qml</file>
         <file>View/ListViewer.qml</file>
         <file>View/Languages.qml</file>
+        <file>View/SideBar.qml</file>
     </qresource>
     <qresource prefix="/img">
         <file>images/HanoiTowers.png</file>

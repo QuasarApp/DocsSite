@@ -6,6 +6,10 @@
         "./src/Wrapper/qtloader.js",
         "./src/Wrapper/index.html"
     ],
+    "extraPlugin": [
+        "./src/html",
+        "./src/images"
+    ],
     "binOut": "/",
     "clear": true,
     "libOut": "/",
