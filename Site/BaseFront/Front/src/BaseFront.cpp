@@ -9,6 +9,7 @@
 
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <correnthostimageprovider.h>
 
 bool BaseFront::init(QQmlApplicationEngine *engine) {
     if (!engine)
@@ -18,6 +19,9 @@ bool BaseFront::init(QQmlApplicationEngine *engine) {
     auto root = engine->rootContext();
     if (!root)
         return false;
+
+    engine->addImageProvider(QLatin1String("curhost"), new CorrentHostImageProvider);
+
     engine->addImportPath(":/");
 
     return true;

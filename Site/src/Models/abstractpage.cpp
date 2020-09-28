@@ -18,5 +18,5 @@ QObject * AbstractPage::makeBlok() const {
 }
 
 QString AbstractPage::resourcesPath() const {
-    return QuasarAppUtils::Params::getCurrentExecutableDir() + "/plugins/images";
+    return "image://curhost/plugins/images";
 }

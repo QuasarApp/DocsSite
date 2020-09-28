@@ -57,24 +57,29 @@
         <translation type="vanished">Поддерживаемые платформы</translation>
     </message>
     <message>
-        <location filename="../Models/mainmodel.cpp" line="109"/>
         <source>At the moment, we can offer support for our solutions for the following platforms:&lt;br&gt;&lt;br&gt;</source>
-        <translation>На данный момент мы можем предложить поддержку наших решений для следующих платформ: &lt;br&gt; &lt;br&gt;</translation>
+        <translation type="vanished">На данный момент мы можем предложить поддержку наших решений для следующих платформ: &lt;br&gt; &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../Models/mainmodel.cpp" line="111"/>
-        <source>- &lt;i&gt; Linux &lt;/i&gt;&lt;br&gt;- &lt;i&gt; Windows &lt;/i&gt;&lt;br&gt;- &lt;i&gt; Android &lt;/i&gt;&lt;br&gt;- &lt;i&gt; Web &lt;/i&gt;</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../Models/mainmodel.cpp" line="122"/>
         <source>Order a project.</source>
-        <translation>Заказать проект.</translation>
+        <translation type="vanished">Заказать проект.</translation>
     </message>
     <message>
-        <location filename="../Models/mainmodel.cpp" line="124"/>
         <source>We are always happy to help you realize your best and most fantastic ideas.&lt;br&gt;&lt;br&gt;If you have an idea for the application, then you can leave a request to create a project with us on GitHub. All that is required of you is a detailed description of what needs to be done. Further, our specialists will decide when work will begin on the project and how much resources will be allocated to the project.&lt;br&gt;&lt;br&gt;That how many resources will be allocated for the development depends on how much this project will collect cash donations.&lt;br&gt;&lt;br&gt;You can also request a private project exclusively for you, but such a project can no longer be free.</source>
-        <translation>Мы всегда рады помочь вам реализовать ваши лучшие и самые фантастические идеи. &lt;br&gt; &lt;br&gt; Если у вас есть идея для приложения, вы можете оставить заявку на создание проекта у нас на GitHub. Все, что от вас требуется, - это подробное описание того, что нужно сделать. Далее наши специалисты решат, когда начнется работа над проектом и сколько ресурсов будет выделено для проекта. &lt;br&gt; &lt;br&gt; То, сколько ресурсов будет выделено на разработку, зависит от того, сколько этот проект собирет денежными пожертвованиями. . &lt;br&gt; &lt;br&gt; Вы также можете запросить частный проект исключительно для вас, но такой проект больше не может быть бесплатным.</translation>
+        <translation type="vanished">Мы всегда рады помочь вам реализовать ваши лучшие и самые фантастические идеи. &lt;br&gt; &lt;br&gt; Если у вас есть идея для приложения, вы можете оставить заявку на создание проекта у нас на GitHub. Все, что от вас требуется, - это подробное описание того, что нужно сделать. Далее наши специалисты решат, когда начнется работа над проектом и сколько ресурсов будет выделено для проекта. &lt;br&gt; &lt;br&gt; То, сколько ресурсов будет выделено на разработку, зависит от того, сколько этот проект собирет денежными пожертвованиями. . &lt;br&gt; &lt;br&gt; Вы также можете запросить частный проект исключительно для вас, но такой проект больше не может быть бесплатным.</translation>
+    </message>
+</context>
+<context>
+    <name>QasarAppOrder</name>
+    <message>
+        <location filename="../Models/qasarapporder.cpp" line="9"/>
+        <source>We are always happy to help you realize your best and most fantastic ideas.&lt;br&gt;&lt;br&gt;If you have an idea for the application, then you can leave a request to create a project with us on GitHub. All that is required of you is a detailed description of what needs to be done. Further, our specialists will decide when work will begin on the project and how much resources will be allocated to the project.&lt;br&gt;&lt;br&gt;That how many resources will be allocated for the development depends on how much this project will collect cash donations.&lt;br&gt;&lt;br&gt;You can also request a private project exclusively for you, but such a project can no longer be free.</source>
+        <translation type="unfinished">Мы всегда рады помочь вам реализовать ваши лучшие и самые фантастические идеи. &lt;br&gt; &lt;br&gt; Если у вас есть идея для приложения, вы можете оставить заявку на создание проекта у нас на GitHub. Все, что от вас требуется, - это подробное описание того, что нужно сделать. Далее наши специалисты решат, когда начнется работа над проектом и сколько ресурсов будет выделено для проекта. &lt;br&gt; &lt;br&gt; То, сколько ресурсов будет выделено на разработку, зависит от того, сколько этот проект собирет денежными пожертвованиями. . &lt;br&gt; &lt;br&gt; Вы также можете запросить частный проект исключительно для вас, но такой проект больше не может быть бесплатным.</translation>
+    </message>
+    <message>
+        <location filename="../Models/qasarapporder.cpp" line="23"/>
+        <source>Order a project.</source>
+        <translation type="unfinished">Заказать проект.</translation>
     </message>
 </context>
 <context>
