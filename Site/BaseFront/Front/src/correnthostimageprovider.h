@@ -1,3 +1,11 @@
+//#
+//# Copyright (C) 2020-2020 QuasarApp.
+//# Distributed under the lgplv3 software license, see the accompanying
+//# Everyone is permitted to copy and distribute verbatim copies
+//# of this license document, but changing it is not allowed.
+//#
+
+
 #ifndef CORRENTHOSTIMAGEPROVIDER_H
 #define CORRENTHOSTIMAGEPROVIDER_H
 
@@ -5,6 +13,7 @@
 #include <QRunnable>
 #include "BaseFront_global.h"
 
+class QNetworkAccessManager;
 
 namespace BaseFront {
 
@@ -12,21 +21,25 @@ class BASEFRONT_LIBRARYSHARED_EXPORT AsyncImageResponse : public QQuickImageResp
 {
 public:
     AsyncImageResponse(const QString &id, const QSize &requestedSize);
+    ~AsyncImageResponse() override;
+    QQuickTextureFactory *textureFactory() const override;
 
-    QQuickTextureFactory *textureFactory() const;
-
-    void run();
-
+    void run() override;
+#ifndef Q_OS_WASM
+private:
+    QNetworkAccessManager *m_manager = nullptr;
+#endif
     QString m_id;
-    QSize m_requestedSize;
     QImage m_image;
+    QSize m_requestedSize;
+
 };
 
 class BASEFRONT_LIBRARYSHARED_EXPORT CorrentHostImageProvider: public QQuickAsyncImageProvider
 {
 public:
     CorrentHostImageProvider();
-    ~CorrentHostImageProvider();
+    ~CorrentHostImageProvider() override;
 
     QQuickImageResponse *requestImageResponse(const QString &id, const QSize &requestedSize) override;
 
