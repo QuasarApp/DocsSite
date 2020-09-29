@@ -13,6 +13,8 @@ namespace BaseFront {
 ImageService::ImageService(QObject *parent):
     QObject(parent) {
     _fetchAPI = new FetchAPI(this);
+
+    connect(_fetchAPI, &FetchAPI::sigFinished(), this, &)
 }
 
 ImageService::~ImageService() {
