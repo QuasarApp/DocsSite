@@ -13,8 +13,6 @@
 
 int main(int argc, char *argv[])
 {
-    QuasarAppUtils::Params::parseParams(argc, argv);
-
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);

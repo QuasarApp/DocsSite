@@ -58,20 +58,26 @@ QQuickTextureFactory *AsyncImageResponse::textureFactory() const {
 }
 
 #ifdef Q_OS_WASM
-void AsyncImageResponse::downloadSucceeded(emscripten_fetch_t *fetch) {
+void downloadSucceeded(emscripten_fetch_t *fetch) {
     auto resp = static_cast<AsyncImageResponse*>(fetch->userData);
     resp->m_image = QImage::fromData(reinterpret_cast<const unsigned char*>(fetch->data),
                                      fetch->numBytes);
 
+    QuasarAppUtils::Params::log(QString("Downloading %0 sucsess, HTTP sucsess status code: %1.\n").
+                                arg(fetch->url).arg(fetch->status),
+                                QuasarAppUtils::Info);
+
+    qDebug() << resp;
+
     if (resp->m_requestedSize.isValid())
         resp->m_image = resp->m_image.scaled(resp->m_requestedSize);
 
-    emit resp->finished();
+    resp->finished();
 
     emscripten_fetch_close(fetch); // Free data associated with the fetch.
 };
 
-void AsyncImageResponse::downloadFailed(emscripten_fetch_t *fetch) {
+void downloadFailed(emscripten_fetch_t *fetch) {
 
     QuasarAppUtils::Params::log(QString("Downloading %0 failed, HTTP failure status code: %1.\n").
                                 arg(fetch->url).arg(fetch->status),
@@ -84,14 +90,12 @@ void AsyncImageResponse::downloadFailed(emscripten_fetch_t *fetch) {
 };
 #endif
 
-
 void AsyncImageResponse::run() {
-
 
 #ifdef Q_OS_WASM
     emscripten_fetch_attr_t attr;
-    attr.userData = this;
     emscripten_fetch_attr_init(&attr);
+    attr.userData = this;
     strcpy(attr.requestMethod, "GET");
     attr.attributes = EMSCRIPTEN_FETCH_LOAD_TO_MEMORY;
     attr.onsuccess = downloadSucceeded;
