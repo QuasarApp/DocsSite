@@ -58,40 +58,39 @@ QQuickTextureFactory *AsyncImageResponse::textureFactory() const {
 }
 
 #ifdef Q_OS_WASM
-static void *response = nullptr;
+void AsyncImageResponse::downloadSucceeded(emscripten_fetch_t *fetch) {
+    auto resp = static_cast<AsyncImageResponse*>(fetch->userData);
+    resp->m_image = QImage::fromData(reinterpret_cast<const unsigned char*>(fetch->data),
+                                     fetch->numBytes);
+
+    if (resp->m_requestedSize.isValid())
+        resp->m_image = resp->m_image.scaled(resp->m_requestedSize);
+
+    emit resp->finished();
+
+    emscripten_fetch_close(fetch); // Free data associated with the fetch.
+};
+
+void AsyncImageResponse::downloadFailed(emscripten_fetch_t *fetch) {
+
+    QuasarAppUtils::Params::log(QString("Downloading %0 failed, HTTP failure status code: %1.\n").
+                                arg(fetch->url).arg(fetch->status),
+                                QuasarAppUtils::Error);
+
+    emscripten_fetch_close(fetch); // Also free data on failure.
+
+    auto resp = static_cast<AsyncImageResponse*>(fetch->userData);
+    resp->cancel();
+};
 #endif
+
 
 void AsyncImageResponse::run() {
 
 
 #ifdef Q_OS_WASM
-    response = this;
-    auto downloadSucceeded = [](emscripten_fetch_t *fetch) {
-        auto resp = static_cast<AsyncImageResponse*>(response);
-        resp->m_image = QImage::fromData(reinterpret_cast<const unsigned char*>(fetch->data),
-                                         fetch->numBytes);
-
-        if (resp->m_requestedSize.isValid())
-            resp->m_image = resp->m_image.scaled(resp->m_requestedSize);
-
-        emit resp->finished();
-
-        emscripten_fetch_close(fetch); // Free data associated with the fetch.
-    };
-
-    auto downloadFailed = [](emscripten_fetch_t *fetch) {
-
-        QuasarAppUtils::Params::log(QString("Downloading %0 failed, HTTP failure status code: %1.\n").
-                                    arg(fetch->url).arg(fetch->status),
-                                    QuasarAppUtils::Error);
-
-        emscripten_fetch_close(fetch); // Also free data on failure.
-
-        auto resp = static_cast<AsyncImageResponse*>(response);
-        resp->cancel();
-    };
-
     emscripten_fetch_attr_t attr;
+    attr.userData = this;
     emscripten_fetch_attr_init(&attr);
     strcpy(attr.requestMethod, "GET");
     attr.attributes = EMSCRIPTEN_FETCH_LOAD_TO_MEMORY;

@@ -15,6 +15,10 @@
 
 class QNetworkAccessManager;
 
+#ifdef Q_OS_WASM
+    class emscripten_fetch_t;
+#endif
+
 namespace BaseFront {
 
 class BASEFRONT_LIBRARYSHARED_EXPORT AsyncImageResponse : public QQuickImageResponse, public QRunnable
@@ -33,6 +37,12 @@ private:
     QImage m_image;
     QSize m_requestedSize;
 
+private:
+#ifdef Q_OS_WASM
+
+    static void downloadSucceeded(emscripten_fetch_t *fetch);
+    static void downloadFailed(emscripten_fetch_t *fetch);
+#endif
 };
 
 class BASEFRONT_LIBRARYSHARED_EXPORT CorrentHostImageProvider: public QQuickAsyncImageProvider
