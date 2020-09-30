@@ -17,17 +17,19 @@ class QNetworkAccessManager;
 
 namespace BaseFront {
 class FetchAPI;
+class CorrentHostImageProvider;
 
 class BASEFRONT_LIBRARYSHARED_EXPORT AsyncImageResponse : public QQuickImageResponse, public QRunnable
 {
 public:
-    AsyncImageResponse(const QString &id, const QSize &requestedSize);
+    AsyncImageResponse(CorrentHostImageProvider* provider, const QString &id, const QSize &requestedSize);
     ~AsyncImageResponse() override;
     QQuickTextureFactory *textureFactory() const override;
 
     void run() override;
 
     FetchAPI *m_fetch = nullptr;
+    CorrentHostImageProvider * m_parentProvider = nullptr;
 
     QString m_id;
     QImage m_image;
@@ -41,6 +43,11 @@ public:
     ~CorrentHostImageProvider() override;
 
     QQuickImageResponse *requestImageResponse(const QString &id, const QSize &requestedSize) override;
+
+    const QImage *fromCache(const QString& id);
+    void addToCache(const QString& id, const QImage& img);
+private:
+    QHash<QString, QImage> _cache;
 
 };
 }
