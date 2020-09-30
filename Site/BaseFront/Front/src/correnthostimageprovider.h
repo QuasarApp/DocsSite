@@ -16,6 +16,7 @@
 class QNetworkAccessManager;
 
 namespace BaseFront {
+class FetchAPI;
 
 class BASEFRONT_LIBRARYSHARED_EXPORT AsyncImageResponse : public QQuickImageResponse, public QRunnable
 {
@@ -25,10 +26,9 @@ public:
     QQuickTextureFactory *textureFactory() const override;
 
     void run() override;
-#ifndef Q_OS_WASM
-private:
-    QNetworkAccessManager *m_manager = nullptr;
-#endif
+
+    FetchAPI *m_fetch = nullptr;
+
     QString m_id;
     QImage m_image;
     QSize m_requestedSize;

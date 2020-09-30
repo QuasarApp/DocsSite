@@ -15,10 +15,10 @@ namespace BaseFront {
 #ifdef Q_OS_WASM
 void downloadSucceeded(emscripten_fetch_t *fetch) {
     auto fetchAPI = static_cast<FetchAPI*>(fetch->userData);
-    QByteArray data(reinterpret_cast<const unsigned char*>(fetch->data),
+    QByteArray data(reinterpret_cast<const char*>(fetch->data),
                    fetch->numBytes);
 
-    emit fetchAPI.sigFinished(QString(%0).arg(fetch->url), data);
+    emit fetchAPI->sigFinished(QString("%0").arg(fetch->url), data);
 
     emscripten_fetch_close(fetch); // Free data associated with the fetch.
 };
@@ -32,7 +32,7 @@ void downloadFailed(emscripten_fetch_t *fetch) {
     emscripten_fetch_close(fetch); // Also free data on failure.
 
     auto fetchAPI = static_cast<FetchAPI*>(fetch->userData);
-    emit fetchAPI.sigError(QString(%0).arg(fetch->url),
+    emit fetchAPI->sigError(QString("%0").arg(fetch->url),
                            QString("Downloading %0 failed, HTTP failure status code: %1.\n").
                            arg(fetch->url).arg(fetch->status));
 

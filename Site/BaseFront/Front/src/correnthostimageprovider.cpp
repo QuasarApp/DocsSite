@@ -7,21 +7,14 @@
 
 
 #include "correnthostimageprovider.h"
-
+#include <cassert>
 #include <quasarapp.h>
-
-#ifdef Q_OS_WASM
-#include <emscripten/fetch.h>
-#include <string>
-#else
-#include <QNetworkAccessManager>
-#include <QNetworkRequest>
-#include <QNetworkReply>
-#endif
+#include <fetchapi.h>
 
 namespace BaseFront {
 
 CorrentHostImageProvider::CorrentHostImageProvider() {
+
 }
 
 CorrentHostImageProvider::~CorrentHostImageProvider() {
@@ -31,7 +24,6 @@ QQuickImageResponse *CorrentHostImageProvider::requestImageResponse(
         const QString &id, const QSize &requestedSize) {
 
     AsyncImageResponse *response = new AsyncImageResponse(id, requestedSize);
-
     response->run();
 
     return response;
@@ -39,97 +31,37 @@ QQuickImageResponse *CorrentHostImageProvider::requestImageResponse(
 
 AsyncImageResponse::AsyncImageResponse(const QString &id, const QSize &requestedSize)
     :
-      #ifndef Q_OS_WASM
-      m_manager(new QNetworkAccessManager),
-      #endif
+      m_fetch(new FetchAPI()),
       m_id(id),
-      m_requestedSize(requestedSize)  {
+      m_requestedSize(requestedSize) {
+
     setAutoDelete(false);
 }
 
 AsyncImageResponse::~AsyncImageResponse() {
-#ifndef Q_OS_WASM
-    delete m_manager;
-#endif
+    delete m_fetch;
 }
 
 QQuickTextureFactory *AsyncImageResponse::textureFactory() const {
+
     return QQuickTextureFactory::textureFactoryForImage(m_image);
 }
 
-#ifdef Q_OS_WASM
-void downloadSucceeded(emscripten_fetch_t *fetch) {
-    auto resp = static_cast<AsyncImageResponse*>(fetch->userData);
-    resp->m_image = QImage::fromData(reinterpret_cast<const unsigned char*>(fetch->data),
-                                     fetch->numBytes);
-
-    QuasarAppUtils::Params::log(QString("Downloading %0 sucsess, HTTP sucsess status code: %1.\n").
-                                arg(fetch->url).arg(fetch->status),
-                                QuasarAppUtils::Info);
-
-    qDebug() << resp;
-
-    if (resp->m_requestedSize.isValid())
-        resp->m_image = resp->m_image.scaled(resp->m_requestedSize);
-
-    resp->finished();
-
-    emscripten_fetch_close(fetch); // Free data associated with the fetch.
-};
-
-void downloadFailed(emscripten_fetch_t *fetch) {
-
-    QuasarAppUtils::Params::log(QString("Downloading %0 failed, HTTP failure status code: %1.\n").
-                                arg(fetch->url).arg(fetch->status),
-                                QuasarAppUtils::Error);
-
-    emscripten_fetch_close(fetch); // Also free data on failure.
-
-    auto resp = static_cast<AsyncImageResponse*>(fetch->userData);
-    resp->cancel();
-};
-#endif
-
 void AsyncImageResponse::run() {
 
-#ifdef Q_OS_WASM
-    emscripten_fetch_attr_t attr;
-    emscripten_fetch_attr_init(&attr);
-    attr.userData = this;
-    strcpy(attr.requestMethod, "GET");
-    attr.attributes = EMSCRIPTEN_FETCH_LOAD_TO_MEMORY;
-    attr.onsuccess = downloadSucceeded;
-    attr.onerror = downloadFailed;
+    m_fetch->Get(m_id);
 
-    auto stdString = m_id.toStdString();
-
-    emscripten_fetch(&attr, stdString.c_str());
-#else
-    QNetworkRequest request;
-
-    m_manager->get(request);
-
-    auto handleRequest= [this](QNetworkReply *reply) {
-
-        if (reply->error() != QNetworkReply::NoError) {
-            QuasarAppUtils::Params::log(reply->errorString(),
-                                        QuasarAppUtils::Error);
-
-            cancel();
-        }
-
-        auto data = reply->readAll();
+    auto handleSuccessful = [this](const QString&, const QByteArray& data) {
         m_image = QImage::fromData(data);
-
-        if (m_requestedSize.isValid())
-            m_image = m_image.scaled(m_requestedSize);
-
         emit finished();
-
     };
 
-    connect(m_manager, &QNetworkAccessManager::finished, handleRequest);
-#endif
+    auto handleFail = [this](const QString&, const QString&) {
+        cancel();
+    };
+
+    connect(m_fetch, &FetchAPI::sigFinished, handleSuccessful);
+    connect(m_fetch, &FetchAPI::sigError, handleFail);
 
 }
 
