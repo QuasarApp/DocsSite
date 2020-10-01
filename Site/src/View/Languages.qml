@@ -14,26 +14,37 @@ RowLayout {
         mainModel.changeLanguage(currentItem);
     }
 
-    ImageView {
-        background: (0 == root.currentItem)? Material.accent : "#00000000"
+    ToolButton {
         Layout.preferredHeight: itemHeigh
         Layout.preferredWidth: itemHeigh
-        soucre : "qrc:/img/images/EN.png"
-        toolTip: qsTr("Select English language");
-        power: 1.9
+        text : "EN"
 
         onClicked: {
             root.currentItem = 0
         }
+
+        ToolTip {
+            parent: parent
+            visible: parent.hovered
+            text: qsTr("Select English language")
+            delay: 500
+
+        }
+
     }
 
-    ImageView {
-        background: (1 == root.currentItem)? Material.accent : "#00000000"
+    ToolButton {
         Layout.preferredHeight: itemHeigh
         Layout.preferredWidth: itemHeigh
-        soucre : "qrc:/img/images/RU.png"
-        toolTip: qsTr("Select Russian language");
-        power: 1.9
+        text : "RU"
+
+        ToolTip {
+            parent: parent
+            visible: parent.hovered
+            text: qsTr("Select Russian language");
+            delay: 500
+
+        }
 
         onClicked: {
             root.currentItem = 1

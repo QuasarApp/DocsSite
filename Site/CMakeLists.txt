@@ -13,6 +13,7 @@ if(TARGET ${PROJECT_NAME})
   return()
 endif()
 
+set(DISABLE_EXAMPLES ON)
 
 add_subdirectory(QuasarAppLib)
 add_subdirectory(ViewSolutions)
@@ -34,6 +35,8 @@ find_package(Qt5 COMPONENTS Core LinguistTools REQUIRED)
 file(GLOB SOURCE_CPP
     "src/*.cpp"
     "src/Models/*.cpp"
+    "src/SideBar/*.cpp"
+
     "src/*.qrc"
 )
 set(TS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/translations")
@@ -56,5 +59,6 @@ target_compile_definitions(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core ViewSolutions QuasarApp BaseFront)
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src/Models")
+target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src/SideBar")
 
 initWasmSupport(${PROJECT_NAME} deployWasm.json)

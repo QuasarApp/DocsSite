@@ -17,6 +17,3 @@ QObject * AbstractPage::makeBlok() const {
     return block;
 }
 
-QString AbstractPage::resourcesPath() const {
-    return "image://curhost/plugins/images";
-}

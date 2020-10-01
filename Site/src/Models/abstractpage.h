@@ -1,13 +1,15 @@
 #ifndef ABSTRACTPAGE_H
 #define ABSTRACTPAGE_H
 
+#include "iresources.h"
+
 #include <QObject>
 #include <QString>
 
 /**
  * @brief The AbstractPage class - This is interface of all text pages on cpp.
  */
-class AbstractPage: public QObject
+class AbstractPage: public QObject, public IResources
 {
     Q_OBJECT
 public:
@@ -40,12 +42,7 @@ public:
     QObject *makeBlok() const;
 
 protected:
-    /**
-     * @brief resourcesPath This method return path to resources of site.
-     * By Default this is plugins folder.
-     * @return path tot resources.
-     */
-    QString resourcesPath() const;
+
 };
 
 #endif // ABSTRACTPAGE_H

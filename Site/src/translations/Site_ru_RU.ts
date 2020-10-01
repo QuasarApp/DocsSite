@@ -2,6 +2,14 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru_RU">
 <context>
+    <name>CQtDeployer</name>
+    <message>
+        <location filename="../SideBar/cqtdeployer.cpp" line="9"/>
+        <source>Crossplatform tool for deploying cpp applications. The CQtDeployer is application for extract all depends library of executable and create launch script for your application.</source>
+        <translation type="unfinished">Кроссплатформенный инструмент для развертывания приложений cpp. CQtDeployer - это приложение для извлечения всех зависимых библиотек исполняемых файлов и создания сценария запуска для вашего приложения.</translation>
+    </message>
+</context>
+<context>
     <name>Header</name>
     <message>
         <source>Back to main page</source>
@@ -24,7 +32,7 @@
         <translation type="vanished">QtBigInt -  Класс  для работы  с числами произвольного размера для C ++ и систем сборок qmake и cmake. Основоно но minigmp.</translation>
     </message>
     <message>
-        <location filename="../View/Header.qml" line="103"/>
+        <location filename="../View/Header.qml" line="38"/>
         <source>Dark Mode</source>
         <translation>Темный режим</translation>
     </message>
@@ -32,12 +40,12 @@
 <context>
     <name>Languages</name>
     <message>
-        <location filename="../View/Languages.qml" line="22"/>
+        <location filename="../View/Languages.qml" line="29"/>
         <source>Select English language</source>
         <translation>Выберите английский язык</translation>
     </message>
     <message>
-        <location filename="../View/Languages.qml" line="35"/>
+        <location filename="../View/Languages.qml" line="44"/>
         <source>Select Russian language</source>
         <translation>Выбрать русский язык</translation>
     </message>

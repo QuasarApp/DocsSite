@@ -40,6 +40,7 @@ ApplicationWindow {
 
     SideBar {
         id: drawer
+        model: (mainModel)? mainModel.pageListModel: null
 
     }
 

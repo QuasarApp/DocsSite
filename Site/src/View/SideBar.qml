@@ -10,9 +10,11 @@ Drawer {
     width: Math.max(parent.width * 0.3, 50 * Screen.pixelDensity)
     height: parent.height
 
+    property var model: null
+
     ListView {
         id: viewPort
-        property real globalPos: 0
+        model: parent.model
 
         delegate: Component {
             ImageView {

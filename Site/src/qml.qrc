@@ -6,23 +6,6 @@
         <file>View/Languages.qml</file>
         <file>View/SideBar.qml</file>
     </qresource>
-    <qresource prefix="/img">
-        <file>images/HanoiTowers.png</file>
-        <file>images/LOGO.png</file>
-        <file>images/CQtDeployer logo.png</file>
-        <file>images/QtBigint Logo.png</file>
-        <file>images/Qt-Secret Logo.png</file>
-        <file>images/os.png</file>
-        <file>images/EN.png</file>
-        <file>images/RU.png</file>
-        <file>images/crossplatforms.png</file>
-        <file>images/startup.png</file>
-    </qresource>
-    <qresource prefix="/sources">
-        <file>html/QuasarAppAbout.htm</file>
-        <file>html/QuasarAppLinks.htm</file>
-        <file>html/QuasarAppRequest.htm</file>
-    </qresource>
     <qresource prefix="/fonts">
         <file>fonts/Roboto-Regular.ttf</file>
         <file>fonts/Lato-Regular.ttf</file>

@@ -60,9 +60,10 @@ void MainModel::changeLanguage(int code) {
         break;
     }
 
-    default:
-        QuasarAppUtils::Locales::setLocale(prefix);
     }
+
+    QuasarAppUtils::Locales::setLocale(prefix);
+
 }
 
 QObject *MainModel::pageModel() const {
@@ -100,6 +101,8 @@ void makePage(QList<QObject *> *page, const Type& blockData) {
 
 template<class Type, class ... Types>
 void makePage(QList<QObject *> *page, const Type& blockData, const Types& ... data) {
+//    static_assert (std::is_same_v<Type, IResources>, "makePage must be use IResources schilds classes");
+
     if (page) {
         page->push_back(blockData.makeBlok());
         makePage(page, data...);
