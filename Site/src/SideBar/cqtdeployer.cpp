@@ -17,3 +17,7 @@ QString CQtDeployer::title() const {
 QString CQtDeployer::backgroud() const {
     return "CQtDeployer.png";
 }
+
+QString CQtDeployer::projectName() const {
+    return "CQtDeployer";
+}

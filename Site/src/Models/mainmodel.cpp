@@ -1,6 +1,8 @@
 #include "mainmodel.h"
 #include "quasarapppage.h"
 #include "reader.h"
+#include <cqtdeployer.h>
+#include <home.h>
 #include <qasarapporder.h>
 #include <quasarapp.h>
 #include <quasarappsupportplatforms.h>
@@ -101,7 +103,8 @@ void makePage(QList<QObject *> *page, const Type& blockData) {
 
 template<class Type, class ... Types>
 void makePage(QList<QObject *> *page, const Type& blockData, const Types& ... data) {
-//    static_assert (std::is_same_v<Type, IResources>, "makePage must be use IResources schilds classes");
+    static_assert (std::is_base_of_v<IResources, Type>,
+            "The makePage fucntion must be use IResources schilds classes");
 
     if (page) {
         page->push_back(blockData.makeBlok());
@@ -113,6 +116,11 @@ void MainModel::initQuasarApp() {
     auto page = new QList<QObject*>();
     makePage(page, QuasarAppPage{}, QuasarAppSupportPlatforms{}, QasarAppOrder{});
     _QuasarAppPages.insert("QuasarApp", page);
+
+    auto sideBar = new QList<QObject*>();
+    makePage(sideBar, Home{}, CQtDeployer{});
+    _QuasarAppPages.insert("SideBar", sideBar);
+    _pageListModel->setExternalSource(sideBar);
 
 }
 

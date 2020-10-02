@@ -16,3 +16,7 @@ QString Home::title() const {
 QString Home::backgroud() const {
     return "QuasarApp.png";
 }
+
+QString Home::projectName() const {
+    return "";
+}

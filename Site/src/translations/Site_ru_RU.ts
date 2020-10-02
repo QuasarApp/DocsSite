@@ -38,6 +38,19 @@
     </message>
 </context>
 <context>
+    <name>Home</name>
+    <message>
+        <location filename="../SideBar/home.cpp" line="9"/>
+        <source>Back to main page</source>
+        <translation type="unfinished">Вернуться на главную страницу</translation>
+    </message>
+    <message>
+        <location filename="../SideBar/home.cpp" line="13"/>
+        <source>Main page</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Languages</name>
     <message>
         <location filename="../View/Languages.qml" line="29"/>

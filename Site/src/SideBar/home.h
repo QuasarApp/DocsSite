@@ -16,6 +16,7 @@ public:
     QString description() const;
     QString title() const;
     QString backgroud() const;
+    QString projectName() const;
 };
 
 #endif // HOME_H

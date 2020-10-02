@@ -14,20 +14,24 @@ Drawer {
 
     ListView {
         id: viewPort
-        model: parent.model
+        model: root.model
 
         delegate: Component {
             ImageView {
                 property var data: modelData
 
-                anchors.fill: parent
                 soucre:  "qrc:/img/res/LOGO.png"
                 text: "QuasarApp"
                 toolTip: "QuasarApp Group"
                 anchors.margins: 20
                 borderColor: "#00a4e1"
+
+                height: width * 0.3
+                width: root.width
             }
+
         }
 
+        anchors.fill: parent
     }
 }

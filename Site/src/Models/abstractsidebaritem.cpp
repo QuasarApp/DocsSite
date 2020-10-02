@@ -13,6 +13,7 @@ QObject *AbstractSideBarItem::makeBlok() const {
     block->setTitle(title());
     block->setDescription(description());
     block->setBanner(backgroud());
+    block->setPath(projectName());
 
     return block;
 }

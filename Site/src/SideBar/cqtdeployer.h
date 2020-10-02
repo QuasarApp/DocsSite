@@ -16,6 +16,8 @@ public:
     QString description() const;
     QString title() const;
     QString backgroud() const;
+    QString projectName() const;
+
 };
 
 #endif // CQTDEPLOYER_H

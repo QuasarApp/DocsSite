@@ -8,6 +8,7 @@
  */
 class QuasarAppPage: public AbstractPage
 {
+    Q_OBJECT
 public:
     QuasarAppPage();
 

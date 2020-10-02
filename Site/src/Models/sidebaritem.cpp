@@ -17,6 +17,10 @@ QString SideBarItem::banner() const {
     return m_banner;
 }
 
+QString SideBarItem::path() const {
+    return m_path;
+}
+
 void SideBarItem::setTitle(QString title) {
     if (m_title == title)
         return;
@@ -39,4 +43,12 @@ void SideBarItem::setBanner(QString banner) {
 
     m_banner = banner;
     emit bannerChanged(m_banner);
+}
+
+void SideBarItem::setPath(QString path) {
+    if (m_path == path)
+        return;
+
+    m_path = path;
+    emit pathChanged(m_path);
 }

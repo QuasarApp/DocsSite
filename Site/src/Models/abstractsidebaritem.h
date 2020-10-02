@@ -33,6 +33,12 @@ public:
      */
     virtual QString backgroud() const = 0;
 
+    /**
+     * @brief projectName this is name of folder with documentation data of project.
+     * @return path to data of project
+     */
+    virtual QString projectName() const = 0;
+
     QObject *makeBlok() const;
 };
 
