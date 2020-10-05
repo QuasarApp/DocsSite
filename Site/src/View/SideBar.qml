@@ -20,8 +20,7 @@ Drawer {
             ImageView {
                 property var data: modelData
 
-                soucre:  modelData.banner
-                text: modelData.title
+                source:  modelData.banner
                 toolTip: modelData.description
                 anchors.margins: 20
                 borderColor: "#00a4e1"

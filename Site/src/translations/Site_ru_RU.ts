@@ -10,6 +10,35 @@
     </message>
 </context>
 <context>
+    <name>CQtDeployerAbout</name>
+    <message>
+        <location filename="../Models/cqtdeployerabout.cpp" line="9"/>
+        <source>The CQtDeployer is application for extract all depends library of executable and create launch script for your application. Key differences of this program:* Performance: this program deploys the application several times faster (up to 10 seconds)* Flexibility: this application&apos;s got flags that help you to configure the deployment for your or your project&apos;s needs* Crossdeploy: this application&apos;s support windows and linux distrebutives, This means that you can use it not only to deploy a project for your platform, but also to deploy a project on Linux for Windows and vice versa.* Fast create installers : Upon completion of the deployment, you will receive a self-contained installer of your distribution.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Models/cqtdeployerabout.cpp" line="21"/>
+        <source>Deploy any С/С++ application is easy with CQTDeployer</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CQtDeployerDocs</name>
+    <message>
+        <location filename="../Models/cqtdeployerdocs.cpp" line="15"/>
+        <source>More Inforamtions About CQtDeployer</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CQtDeployerExamples</name>
+    <message>
+        <location filename="../Models/cqtdeployerexamples.cpp" line="14"/>
+        <source>Get CQtDeployer</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Header</name>
     <message>
         <source>Back to main page</source>

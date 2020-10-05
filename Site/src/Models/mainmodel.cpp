@@ -2,6 +2,9 @@
 #include "quasarapppage.h"
 #include "reader.h"
 #include <cqtdeployer.h>
+#include <cqtdeployerabout.h>
+#include <cqtdeployerdocs.h>
+#include <cqtdeployerexamples.h>
 #include <home.h>
 #include <qasarapporder.h>
 #include <quasarapp.h>
@@ -116,6 +119,10 @@ void MainModel::initQuasarApp() {
     auto page = new QList<QObject*>();
     makePage(page, QuasarAppPage{}, QuasarAppSupportPlatforms{}, QasarAppOrder{});
     _QuasarAppPages.insert("QuasarApp", page);
+
+    auto cqtpage = new QList<QObject*>();
+    makePage(cqtpage, CQtDeployerAbout{}, CQtDeployerExamples{}, CQtDeployerDocs{});
+    _QuasarAppPages.insert("CQtDeployer", cqtpage);
 
     auto sideBar = new QList<QObject*>();
     makePage(sideBar, Home{}, CQtDeployer{});
