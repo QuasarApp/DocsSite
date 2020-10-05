@@ -20,14 +20,19 @@ Drawer {
             ImageView {
                 property var data: modelData
 
-                soucre:  "qrc:/img/res/LOGO.png"
-                text: "QuasarApp"
-                toolTip: "QuasarApp Group"
+                soucre:  modelData.banner
+                text: modelData.title
+                toolTip: modelData.description
                 anchors.margins: 20
                 borderColor: "#00a4e1"
+                power: 0.4
 
                 height: width * 0.3
                 width: root.width
+
+                onClicked: {
+                    mainModel.openPage(modelData.path);
+                }
             }
 
         }

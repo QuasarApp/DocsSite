@@ -24,5 +24,5 @@ QString QasarAppOrder::title() const {
 }
 
 QString QasarAppOrder::backgroud() const {
-    return resourcesPath() + "/startup.png";
+    return resourcesPath() + "/icongoldcorp.png";
 }

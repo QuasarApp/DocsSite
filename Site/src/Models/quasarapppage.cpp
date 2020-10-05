@@ -26,5 +26,5 @@ QString QuasarAppPage::title() const {
 }
 
 QString QuasarAppPage::backgroud() const {
-    return resourcesPath() + "/LOGO.png";
+    return resourcesPath() + "/quasarapp.png";
 }
