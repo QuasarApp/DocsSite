@@ -12,12 +12,12 @@
 <context>
     <name>CQtDeployerAbout</name>
     <message>
-        <location filename="../Models/cqtdeployerabout.cpp" line="9"/>
-        <source>The CQtDeployer is application for extract all depends library of executable and create launch script for your application. Key differences of this program:* Performance: this program deploys the application several times faster (up to 10 seconds)* Flexibility: this application&apos;s got flags that help you to configure the deployment for your or your project&apos;s needs* Crossdeploy: this application&apos;s support windows and linux distrebutives, This means that you can use it not only to deploy a project for your platform, but also to deploy a project on Linux for Windows and vice versa.* Fast create installers : Upon completion of the deployment, you will receive a self-contained installer of your distribution.</source>
+        <location filename="../Models/cqtdeployerpage.cpp" line="9"/>
+        <source>The CQtDeployer is application for extract all depends library of executable and create launch script for your application.&lt;br&gt;&lt;br&gt;&lt;br&gt; Key differences of this program:&lt;br&gt;&lt;br&gt;* Performance: this program deploys the application several times faster (up to 10 seconds)&lt;br&gt;&lt;br&gt;* Flexibility: this application&apos;s got flags that help you to configure the deployment for your or your project&apos;s needs&lt;br&gt;&lt;br&gt;* Crossdeploy: this application&apos;s support windows and linux distrebutives, This means that you can use it not only to deploy a project for your platform, but also to deploy a project on Linux for Windows and vice versa.&lt;br&gt;&lt;br&gt;* Fast create installers : Upon completion of the deployment, you will receive a self-contained installer of your distribution.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/cqtdeployerabout.cpp" line="21"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="31"/>
         <source>Deploy any С/С++ application is easy with CQTDeployer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25,7 +25,12 @@
 <context>
     <name>CQtDeployerDocs</name>
     <message>
-        <location filename="../Models/cqtdeployerdocs.cpp" line="15"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="65"/>
+        <source>CQtDeployer project have a </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Models/cqtdeployerpage.cpp" line="71"/>
         <source>More Inforamtions About CQtDeployer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33,7 +38,7 @@
 <context>
     <name>CQtDeployerExamples</name>
     <message>
-        <location filename="../Models/cqtdeployerexamples.cpp" line="14"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="50"/>
         <source>Get CQtDeployer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -122,12 +127,12 @@
 <context>
     <name>QasarAppOrder</name>
     <message>
-        <location filename="../Models/qasarapporder.cpp" line="9"/>
+        <location filename="../Models/quasarapppage.cpp" line="66"/>
         <source>We are always happy to help you realize your best and most fantastic ideas.&lt;br&gt;&lt;br&gt;If you have an idea for the application, then you can leave a request to create a project with us on GitHub. All that is required of you is a detailed description of what needs to be done. Further, our specialists will decide when work will begin on the project and how much resources will be allocated to the project.&lt;br&gt;&lt;br&gt;That how many resources will be allocated for the development depends on how much this project will collect cash donations.&lt;br&gt;&lt;br&gt;You can also request a private project exclusively for you, but such a project can no longer be free.</source>
         <translation type="unfinished">Мы всегда рады помочь вам реализовать ваши лучшие и самые фантастические идеи. &lt;br&gt; &lt;br&gt; Если у вас есть идея для приложения, вы можете оставить заявку на создание проекта у нас на GitHub. Все, что от вас требуется, - это подробное описание того, что нужно сделать. Далее наши специалисты решат, когда начнется работа над проектом и сколько ресурсов будет выделено для проекта. &lt;br&gt; &lt;br&gt; То, сколько ресурсов будет выделено на разработку, зависит от того, сколько этот проект собирет денежными пожертвованиями. . &lt;br&gt; &lt;br&gt; Вы также можете запросить частный проект исключительно для вас, но такой проект больше не может быть бесплатным.</translation>
     </message>
     <message>
-        <location filename="../Models/qasarapporder.cpp" line="23"/>
+        <location filename="../Models/quasarapppage.cpp" line="80"/>
         <source>Order a project.</source>
         <translation type="unfinished">Заказать проект.</translation>
     </message>
@@ -153,17 +158,17 @@
 <context>
     <name>QuasarAppSupportPlatforms</name>
     <message>
-        <location filename="../Models/quasarappsupportplatforms.cpp" line="9"/>
+        <location filename="../Models/quasarapppage.cpp" line="40"/>
         <source>At the moment, we can offer support for our solutions for the following platforms:&lt;br&gt;&lt;br&gt;</source>
         <translation type="unfinished">На данный момент мы можем предложить поддержку наших решений для следующих платформ: &lt;br&gt; &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../Models/quasarappsupportplatforms.cpp" line="11"/>
+        <location filename="../Models/quasarapppage.cpp" line="42"/>
         <source>- &lt;i&gt; Linux &lt;/i&gt;&lt;br&gt;- &lt;i&gt; Windows &lt;/i&gt;&lt;br&gt;- &lt;i&gt; Android &lt;/i&gt;&lt;br&gt;- &lt;i&gt; Web &lt;/i&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/quasarappsupportplatforms.cpp" line="20"/>
+        <location filename="../Models/quasarapppage.cpp" line="51"/>
         <source>Supported Platforms</source>
         <translation type="unfinished">Поддерживаемые платформы</translation>
     </message>

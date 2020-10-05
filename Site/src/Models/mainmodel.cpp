@@ -2,13 +2,10 @@
 #include "quasarapppage.h"
 #include "reader.h"
 #include <cqtdeployer.h>
-#include <cqtdeployerabout.h>
-#include <cqtdeployerdocs.h>
-#include <cqtdeployerexamples.h>
+#include <cqtdeployerpage.h>
+
 #include <home.h>
-#include <qasarapporder.h>
 #include <quasarapp.h>
-#include <quasarappsupportplatforms.h>
 
 MainModel::MainModel(QObject *parent) : QObject(parent) {
     setPageModel(new ViewSolutions::ListViewModel(this));

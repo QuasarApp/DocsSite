@@ -19,4 +19,30 @@ public:
 
 };
 
+
+class QasarAppOrder: public AbstractPage
+{
+public:
+    QasarAppOrder();
+
+    // AbstractPage interface
+public:
+    QString data() const override;
+    QString title() const override;
+    QString backgroud() const override;
+};
+
+class QuasarAppSupportPlatforms: public AbstractPage
+{
+public:
+    QuasarAppSupportPlatforms();
+
+    // AbstractPage interface
+public:
+    QString data() const override;
+    QString title() const override;
+    QString backgroud() const override;
+};
+
+
 #endif // QUASARAPPPAGE_H
