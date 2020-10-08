@@ -10,8 +10,9 @@
         "./src/html",
         "./src/images"
     ],
+    "zip": true,
     "binOut": "/",
     "clear": true,
     "libOut": "/",
-    "targetDir": "./DeploymentSite"
+    "targetDir": "./../Distro"
 }
