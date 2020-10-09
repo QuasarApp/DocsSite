@@ -13,7 +13,7 @@ if(TARGET ${PROJECT_NAME})
   return()
 endif()
 
-set(DISABLE_EXAMPLES ON)
+set(DISABLE_EXAMPLES OFF)
 
 add_subdirectory(QuasarAppLib)
 add_subdirectory(ViewSolutions)

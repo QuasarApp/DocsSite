@@ -176,7 +176,7 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../../ViewSolutions/Examples/src/main.qml" line="112"/>
+        <location filename="../../ViewSolutions/Examples/src/main.qml" line="113"/>
         <source>Examples of View Solutions</source>
         <translation>Примеры решений View</translation>
     </message>
