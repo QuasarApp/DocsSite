@@ -22,12 +22,19 @@ ListView {
             text: (data)? data.sourceText: ""
             textMargins: 40
             width: viewPort.width
-            viewground: viewPort
-            height: 400
+//            viewground: viewgroundItem
 
         }
     }
 
     spacing: 24
 
+//    Item {
+//        id: viewgroundItem
+
+//        anchors.right: parent.right
+//        anchors.top: parent.top
+//        anchors.bottom: parent.bottom
+//        width: parent.width / 2
+//    }
 }
