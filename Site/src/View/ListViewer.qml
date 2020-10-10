@@ -23,6 +23,7 @@ ListView {
             textMargins: 40
             width: viewPort.width
             viewground: viewgroundItem
+            listView: viewPort
 
         }
     }
