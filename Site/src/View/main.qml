@@ -35,7 +35,11 @@ ApplicationWindow {
         ListViewer {
         id: sourceList
         model: (mainModel)? mainModel.pageModel: null
-        anchors.fill: parent
+
+        anchors.top: parent.top;
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width - 40
     }
 
     SideBar {
