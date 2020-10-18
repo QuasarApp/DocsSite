@@ -1,9 +1,11 @@
+#include "heartpage.h"
 #include "mainmodel.h"
 #include "quasarapppage.h"
 #include "reader.h"
 #include <cqtdeployer.h>
 #include <cqtdeployerpage.h>
 
+#include <heart.h>
 #include <home.h>
 #include <quasarapp.h>
 
@@ -121,8 +123,13 @@ void MainModel::initQuasarApp() {
     makePage(cqtpage, CQtDeployerAbout{}, CQtDeployerExamples{}, CQtDeployerDocs{});
     _QuasarAppPages.insert("CQtDeployer", cqtpage);
 
+    auto heart = new QList<QObject*>();
+    makePage(heart, HeartAbout{}, HeartExamples{}, HeartDocs{});
+    _QuasarAppPages.insert("Heart", heart);
+
+
     auto sideBar = new QList<QObject*>();
-    makePage(sideBar, Home{}, CQtDeployer{});
+    makePage(sideBar, Home{}, CQtDeployer{}, Heart{});
     _QuasarAppPages.insert("SideBar", sideBar);
     _pageListModel->setExternalSource(sideBar);
 

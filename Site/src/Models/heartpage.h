@@ -7,35 +7,38 @@ class HeartAbout: public AbstractPage
 {
 public:
     HeartAbout();
+    ~HeartAbout() override;
 
     // AbstractPage interface
 public:
-    QString data() const;
-    QString title() const;
-    QString backgroud() const;
+    QString data() const override;
+    QString title() const override;
+    QString backgroud() const override;
 };
 
 class HeartExamples: public AbstractPage
 {
 public:
     HeartExamples();
+    ~HeartExamples() override;
 
     // AbstractPage interface
 public:
-    QString data() const;
-    QString title() const;
-    QString backgroud() const;
+    QString data() const override;
+    QString title() const override;
+    QString backgroud() const override;
 };
 
 class HeartDocs: public AbstractPage
 {
 public:
     HeartDocs();
+    ~HeartDocs() override;
 
     // AbstractPage interface
 public:
-    QString data() const;
-    QString title() const;
-    QString backgroud() const;
+    QString data() const override;
+    QString title() const override;
+    QString backgroud() const override;
 };
 #endif // HEARTPAGE_H
