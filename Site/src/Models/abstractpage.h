@@ -6,6 +6,10 @@
 #include <QObject>
 #include <QString>
 
+namespace BaseFront {
+    class Link;
+}
+
 /**
  * @brief The AbstractPage class - This is interface of all text pages on cpp.
  */
@@ -34,6 +38,12 @@ public:
      */
     virtual QString backgroud() const = 0;
 
+    /**
+     * @brief links This method should be return the list of links for open in web.
+     * @return list of links.
+     * The Default implementation return empry list.
+     */
+    virtual QList<BaseFront::Link> links() const;
 
     /**
      * @brief makeBlok This method build infoblock from available data.

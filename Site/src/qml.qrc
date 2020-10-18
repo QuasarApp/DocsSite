@@ -5,6 +5,7 @@
         <file>View/ListViewer.qml</file>
         <file>View/Languages.qml</file>
         <file>View/SideBar.qml</file>
+        <file>View/InfoBlock.qml</file>
     </qresource>
     <qresource prefix="/fonts">
         <file>fonts/Roboto-Regular.ttf</file>

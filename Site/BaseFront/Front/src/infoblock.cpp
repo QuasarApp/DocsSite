@@ -17,6 +17,22 @@ QString InfoBlock::bakcBroundPicture() const {
     return m_bakcBroundPicture;
 }
 
+QString InfoBlock::linkName(int index) const {
+    return m_links.value(index).name;
+}
+
+QString InfoBlock::linkAddress(int index) const {
+    return m_links.value(index).link;
+}
+
+int InfoBlock::linksCount() const {
+    return m_links.size();
+}
+
+void InfoBlock::setLinks(const QList<Link> &links) {
+    m_links = links;
+}
+
 void InfoBlock::setTitle(QString title) {
     if (m_title == title)
         return;
@@ -33,7 +49,7 @@ void InfoBlock::setSourceText(QString sourceText) {
     emit sourceTextChanged(m_sourceText);
 }
 
-void InfoBlock::setBakcBroundPicture(QString bakcBroundPicture) {
+void InfoBlock::setBakcgroundPicture(QString bakcBroundPicture) {
     if (m_bakcBroundPicture == bakcBroundPicture)
         return;
 
@@ -43,6 +59,11 @@ void InfoBlock::setBakcBroundPicture(QString bakcBroundPicture) {
 
 uint qHash(const InfoBlock &obj) {
     return qHash(obj.title() + obj.sourceText() + obj.bakcBroundPicture());
+}
+
+Link::Link(const QString &name, const QString &link) {
+    this->name = name;
+    this->link = link;
 }
 
 }

@@ -10,9 +10,11 @@ public:
 
     // AbstractPage interface
 public:
-    QString data() const;
-    QString title() const;
-    QString backgroud() const;
+    QString data() const override;
+    QString title() const override;
+    QString backgroud() const override;
+    QList<BaseFront::Link> links() const override;
+
 };
 
 
@@ -23,9 +25,11 @@ public:
 
     // AbstractPage interface
 public:
-    QString data() const;
-    QString title() const;
-    QString backgroud() const;
+    QString data() const override;
+    QString title() const override;
+    QString backgroud() const override;
+    QList<BaseFront::Link> links() const override;
+
 };
 
 
@@ -36,9 +40,11 @@ public:
 
     // AbstractPage interface
 public:
-    QString data() const;
-    QString title() const;
-    QString backgroud() const;
+    QString data() const override;
+    QString title() const override;
+    QString backgroud() const override;
+    QList<BaseFront::Link> links() const override;
+
 };
 
 

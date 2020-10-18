@@ -12,39 +12,92 @@
 <context>
     <name>CQtDeployerAbout</name>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="9"/>
-        <source>The CQtDeployer is application for extract all depends library of executable and create launch script for your application.&lt;br&gt;&lt;br&gt;&lt;br&gt; Key differences of this program:&lt;br&gt;&lt;br&gt;* Performance: this program deploys the application several times faster (up to 10 seconds)&lt;br&gt;&lt;br&gt;* Flexibility: this application&apos;s got flags that help you to configure the deployment for your or your project&apos;s needs&lt;br&gt;&lt;br&gt;* Crossdeploy: this application&apos;s support windows and linux distrebutives, This means that you can use it not only to deploy a project for your platform, but also to deploy a project on Linux for Windows and vice versa.&lt;br&gt;&lt;br&gt;* Fast create installers : Upon completion of the deployment, you will receive a self-contained installer of your distribution.</source>
+        <location filename="../Models/cqtdeployerpage.cpp" line="11"/>
+        <source>
+## What is CQtDeployer 
+The CQtDeployer is application for extract all depends library of executable and create launch script for your application.
+
+Key differences of this program:
+* Performance: this program deploys the application several times faster (up to 10 seconds)
+* Flexibility: this application&apos;s got flags that help you to configure the deployment for your or your project&apos;s needs
+* Crossdeploy: this application&apos;s support windows and linux distrebutives, This means that you can use it not only to deploy a project for your platform, but also to deploy a project on Linux for Windows and vice versa.
+* Fast create installers : Upon completion of the deployment, you will receive a self-contained installer of your distribution.
+
+## Supported platforms:
+* Linux classic
+* Linux snap 
+* Windows 
+
+## Support processors architectures:
+* x86 
+* x86-64 
+* ARM 
+* ARM64 
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="31"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="39"/>
         <source>Deploy any С/С++ application is easy with CQTDeployer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Models/cqtdeployerpage.cpp" line="47"/>
+        <source>get more information</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>CQtDeployerDocs</name>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="78"/>
-        <source>The source code for CQtDeployer components is provided under Gplv3 licenses and is freely available on GitHub. &lt;br&gt;&lt;br&gt;* Full description and documentation: available &lt;a href=&apos;https://github.com/QuasarApp/CQtDeployer/wiki&apos;&gt;here&lt;/a&gt;Download &lt;a href=&apos;https://github.com/QuasarApp/CQtDeployer/releases&apos;&gt;Page&lt;/a&gt;</source>
+        <location filename="../Models/cqtdeployerpage.cpp" line="93"/>
+        <source>The source code for CQtDeployer components is provided under Gplv3 licenses and is freely available on GitHub. 
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="86"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="100"/>
         <source>More Inforamtions About CQtDeployer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Models/cqtdeployerpage.cpp" line="109"/>
+        <source>Full description and documentation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Models/cqtdeployerpage.cpp" line="110"/>
+        <source>Download</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>CQtDeployerExamples</name>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="45"/>
-        <source>The utility transfers the path to the executable files of the deployed programs using the option -bin. The transferred programs are analyzed and get a list of dependencies. If the programs being deployed depend on Qt, then a list of modules is formed based on the dependencies. Qt plugins are deployed depending on the qt modules used. Then qml plugins are copied, if necessary, and standard qt translations. After completing all the steps described, scripts are formed to launch the application. &lt;br&gt;&lt;br&gt;&lt;br&gt;For example: &lt;br&gt;&lt;br&gt;&lt;h4&gt;Linux&lt;/h4&gt;:&lt;br&gt;cqtdeployer -bin myApp -qmake /media/D/Qt/5.15.2/gcc_64/bin/qmake -qmlDir .&lt;br&gt;&lt;h4&gt;Windows&lt;/h4&gt;:&lt;br&gt;cqtdeployer -bin myApp.exe -qmake /media/D/Qt/5.12.5/gcc_64/bin/qmake.exe -qmlDir . &lt;br&gt;Where:&lt;br&gt;&lt;br&gt;• cqtdeployer is a utility call (befor version 1.4 windows version used %cqtdeployer% command).&lt;br&gt;• - bin - the option for transferring the paths of the application executable files.&lt;br&gt;• myApp.exe and myApp - the path to the application executable file itself&lt;br&gt;• - qmake - the option for transferring qmake paths for qt deployment.&lt;br&gt;• - qmlDir - the option for transferring paths to qml files of the application.&lt;br&gt;&lt;br&gt; For more exampless you can see the our wiki &lt;a href=&apos;https://github.com/QuasarApp/CQtDeployer/wiki/quickguide&apos;&gt;page&lt;/a&gt;</source>
+        <location filename="../Models/cqtdeployerpage.cpp" line="57"/>
+        <source>The utility transfers the path to the executable files of the deployed programs using the option -bin. The transferred programs are analyzed and get a list of dependencies. If the programs being deployed depend on Qt, then a list of modules is formed based on the dependencies. Qt plugins are deployed depending on the qt modules used. Then qml plugins are copied, if necessary, and standard qt translations. After completing all the steps described, scripts are formed to launch the application.
+ ### For example: 
+ #### Linux 
+ ```cqtdeployer -bin myApp -qmake /media/D/Qt/5.15.2/gcc_64/bin/qmake -qmlDir . ```
+ #### Windows
+ ``` cqtdeployer -bin myApp.exe -qmake /media/D/Qt/5.12.5/gcc_64/bin/qmake.exe -qmlDir . ```
+ #### Where:
+ * cqtdeployer is a utility call (befor version 1.4 windows version used %cqtdeployer% command).
+ * -bin - the option for transferring the paths of the application executable files.
+ * myApp.exe and myApp - the path to the application executable file itself
+ * -qmake - the option for transferring qmake paths for qt deployment.
+ * -qmlDir - the option for transferring paths to qml files of the application.
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="63"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="74"/>
         <source>Get started</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Models/cqtdeployerpage.cpp" line="84"/>
+        <source>more exampless</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -88,7 +141,7 @@
     <name>HeartAbout</name>
     <message>
         <location filename="../Models/heartpage.cpp" line="15"/>
-        <source>QuasarApp Heart - it is base backend for C++/Qt projects. This library support work with databases and work with lite network requests. &lt;br&gt;&lt;br&gt;&lt;h2&gt; Futures &lt;/h2&gt; &lt;br&gt; &lt;br&gt;&lt;br&gt; &lt;br&gt; * [YES]Support ssl sockets &lt;&lt;br&gt; * [YES] Support initialize database &lt;br&gt; * [YES] Support work in database &lt;br&gt; * [STILL NO] Support decentralized network mode &lt;br&gt; This library consists of two levels (AbstractNode level and DataBaseNode level).&lt;br&gt; &lt;br&gt; &lt;h3&gt; AbstractNode level (0) &lt;/h3&gt;&lt;br&gt; &lt;h4&gt; Description &lt;/h4&gt;&lt;br&gt;The AbstractNode level implement only base functions of create a new work threads and parsing packages.&lt;br&gt;For more information see QuasarApp Heart documentation, QH namespace.&lt;br&gt;&lt;br&gt; &lt;h3&gt; DataBaseNode level (1)&lt;/h3&gt;&lt;br&gt; &lt;h4&gt; Description&lt;h4&gt;The DataBaseNode level implement methods and packages for work with databases. This level using Qt classes for wrking with database, so for more information about suport databases see &lt;a href=&apos;https://doc.qt.io/qt-5/sql-driver.html&apos;&gt;Qt Documentation&lt;/a&gt;.</source>
+        <source>QuasarApp Heart - it is base backend for C++/Qt projects. This library support work with databases and work with lite network requests. &lt;br&gt;&lt;br&gt;&lt;h2&gt; Futures &lt;/h2&gt; &lt;br&gt; &lt;br&gt;&lt;br&gt; &lt;br&gt; * [YES]Support ssl sockets &lt;&lt;br&gt; * [YES] Support initialize database &lt;br&gt; * [YES] Support work in database &lt;br&gt; * [STILL NO] Support decentralized network mode &lt;br&gt; This library consists of two levels (AbstractNode level and DataBaseNode level).&lt;br&gt; &lt;br&gt; &lt;h3&gt; AbstractNode level (0) &lt;/h3&gt;&lt;br&gt; &lt;h4&gt; Description &lt;/h4&gt;&lt;br&gt;The AbstractNode level implement only base functions of create a new work threads and parsing packages.&lt;br&gt;For more information see QuasarApp Heart documentation, QH namespace.&lt;br&gt;&lt;br&gt; &lt;h3&gt; DataBaseNode level (1)&lt;/h3&gt;&lt;br&gt; &lt;h4&gt; Description&lt;/h4&gt;The DataBaseNode level implement methods and packages for work with databases. This level using Qt classes for wrking with database, so for more information about suport databases see &lt;a href=&apos;https://doc.qt.io/qt-5/sql-driver.html&apos;&gt;Qt Documentation&lt;/a&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -101,7 +154,7 @@
     <name>HeartDocs</name>
     <message>
         <location filename="../Models/heartpage.cpp" line="79"/>
-        <source>&lt;br&gt;QuasarApp Heart - if you want get more information see the &lt;a href=&apos;docs/heart/html/index.html&apos;&gt;technical documentation&lt;/a&gt;.</source>
+        <source>&lt;br&gt;QuasarApp Heart - if you want get more information see the &lt;a href=&apos;docs/heart/html/index.html&apos;&gt;technical documentation&lt;/a&gt;. &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -114,7 +167,7 @@
     <name>HeartExamples</name>
     <message>
         <location filename="../Models/heartpage.cpp" line="56"/>
-        <source>&lt;br&gt;QuasarApp Heart - has very detailed examples of how the library works, as well as a complete description of all the functions in the official technical documentation. But if you want to get only a short example of how to use it, you can visit the official page on &lt;a href=&apos;https://github.com/QuasarApp/Heart&apos;&gt;github&lt;/a&gt;.</source>
+        <source>&lt;br&gt;QuasarApp Heart - has very detailed examples of how the library works, as well as a complete description of all the functions in the official technical documentation. &lt;br&gt;&lt;br&gt; But if you want to get only a short example of how to use it, you can visit the official page on &lt;a href=&apos;https://github.com/QuasarApp/Heart&apos;&gt;github&lt;/a&gt;.&lt;br&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

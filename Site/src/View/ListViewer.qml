@@ -16,7 +16,7 @@ ListView {
 
     delegate: Component {
 
-        ViewPortGradientPage {
+        InfoBlock {
             property var data: modelData
             source:  (data)? data.bakcBroundPicture: ""
             title: (data)? data.title: ""
@@ -28,6 +28,8 @@ ListView {
             width: viewPort.width
             viewground: viewgroundItem
             listView: viewPort
+            linksCount: (data)? data.linksCount: 0
+            model: data
 
         }
     }
