@@ -9,7 +9,7 @@ CQtDeployerAbout::CQtDeployerAbout()
 
 QString CQtDeployerAbout::data() const {
     auto sourceText = tr(
-                "\n## What is CQtDeployer \n"
+                "\n## What is CQtDeployer \n\n\n\n\n\n\n"
                 "The CQtDeployer is application for extract all depends library of executable and create launch script for your application.\n"
                 "\n"
                 "Key differences of this program:\n"
@@ -57,9 +57,9 @@ QString CQtDeployerExamples::data() const {
     auto sourceText = tr("The utility transfers the path to the executable files of the deployed programs using the option -bin. The transferred programs are analyzed and get a list of dependencies. If the programs being deployed depend on Qt, then a list of modules is formed based on the dependencies. Qt plugins are deployed depending on the qt modules used. Then qml plugins are copied, if necessary, and standard qt translations. After completing all the steps described, scripts are formed to launch the application.\n"
                          " ### For example: \n"
                          " #### Linux \n"
-                         " ```cqtdeployer -bin myApp -qmake /media/D/Qt/5.15.2/gcc_64/bin/qmake -qmlDir . ```\n"
+                         " cqtdeployer -bin myApp -qmake /media/D/Qt/5.15.2/gcc_64/bin/qmake -qmlDir . \n"
                          " #### Windows\n"
-                         " ``` cqtdeployer -bin myApp.exe -qmake /media/D/Qt/5.12.5/gcc_64/bin/qmake.exe -qmlDir . ```\n"
+                         " cqtdeployer -bin myApp.exe -qmake /media/D/Qt/5.12.5/gcc_64/bin/qmake.exe -qmlDir . \n"
                          " #### Where:\n"
                          " * cqtdeployer is a utility call (befor version 1.4 windows version used %cqtdeployer% command).\n"
                          " * -bin - the option for transferring the paths of the application executable files.\n"

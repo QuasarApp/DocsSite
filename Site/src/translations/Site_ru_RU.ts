@@ -13,27 +13,7 @@
     <name>CQtDeployerAbout</name>
     <message>
         <location filename="../Models/cqtdeployerpage.cpp" line="11"/>
-        <source>
-## What is CQtDeployer 
-The CQtDeployer is application for extract all depends library of executable and create launch script for your application.
-
-Key differences of this program:
-* Performance: this program deploys the application several times faster (up to 10 seconds)
-* Flexibility: this application&apos;s got flags that help you to configure the deployment for your or your project&apos;s needs
-* Crossdeploy: this application&apos;s support windows and linux distrebutives, This means that you can use it not only to deploy a project for your platform, but also to deploy a project on Linux for Windows and vice versa.
-* Fast create installers : Upon completion of the deployment, you will receive a self-contained installer of your distribution.
-
-## Supported platforms:
-* Linux classic
-* Linux snap 
-* Windows 
-
-## Support processors architectures:
-* x86 
-* x86-64 
-* ARM 
-* ARM64 
-</source>
+        <source>&amp;nbsp;&amp;nbsp;## What is CQtDeployer &amp;nbsp;&amp;nbsp;The CQtDeployer is application for extract all depends library of executable and create launch script for your application.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Key differences of this program:&amp;nbsp;&amp;nbsp;* Performance: this program deploys the application several times faster (up to 10 seconds)&amp;nbsp;&amp;nbsp;* Flexibility: this application&apos;s got flags that help you to configure the deployment for your or your project&apos;s needs&amp;nbsp;&amp;nbsp;* Crossdeploy: this application&apos;s support windows and linux distrebutives, This means that you can use it not only to deploy a project for your platform, but also to deploy a project on Linux for Windows and vice versa.&amp;nbsp;&amp;nbsp;* Fast create installers : Upon completion of the deployment, you will receive a self-contained installer of your distribution.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;## Supported platforms:&amp;nbsp;&amp;nbsp;* Linux classic&amp;nbsp;&amp;nbsp;* Linux snap &amp;nbsp;&amp;nbsp;* Windows &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;## Support processors architectures:&amp;nbsp;&amp;nbsp;* x86 &amp;nbsp;&amp;nbsp;* x86-64 &amp;nbsp;&amp;nbsp;* ARM &amp;nbsp;&amp;nbsp;* ARM64 &amp;nbsp;&amp;nbsp;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -51,8 +31,7 @@ Key differences of this program:
     <name>CQtDeployerDocs</name>
     <message>
         <location filename="../Models/cqtdeployerpage.cpp" line="93"/>
-        <source>The source code for CQtDeployer components is provided under Gplv3 licenses and is freely available on GitHub. 
-</source>
+        <source>The source code for CQtDeployer components is provided under Gplv3 licenses and is freely available on GitHub. &amp;nbsp;&amp;nbsp;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -75,19 +54,7 @@ Key differences of this program:
     <name>CQtDeployerExamples</name>
     <message>
         <location filename="../Models/cqtdeployerpage.cpp" line="57"/>
-        <source>The utility transfers the path to the executable files of the deployed programs using the option -bin. The transferred programs are analyzed and get a list of dependencies. If the programs being deployed depend on Qt, then a list of modules is formed based on the dependencies. Qt plugins are deployed depending on the qt modules used. Then qml plugins are copied, if necessary, and standard qt translations. After completing all the steps described, scripts are formed to launch the application.
- ### For example: 
- #### Linux 
- ```cqtdeployer -bin myApp -qmake /media/D/Qt/5.15.2/gcc_64/bin/qmake -qmlDir . ```
- #### Windows
- ``` cqtdeployer -bin myApp.exe -qmake /media/D/Qt/5.12.5/gcc_64/bin/qmake.exe -qmlDir . ```
- #### Where:
- * cqtdeployer is a utility call (befor version 1.4 windows version used %cqtdeployer% command).
- * -bin - the option for transferring the paths of the application executable files.
- * myApp.exe and myApp - the path to the application executable file itself
- * -qmake - the option for transferring qmake paths for qt deployment.
- * -qmlDir - the option for transferring paths to qml files of the application.
-</source>
+        <source>The utility transfers the path to the executable files of the deployed programs using the option -bin. The transferred programs are analyzed and get a list of dependencies. If the programs being deployed depend on Qt, then a list of modules is formed based on the dependencies. Qt plugins are deployed depending on the qt modules used. Then qml plugins are copied, if necessary, and standard qt translations. After completing all the steps described, scripts are formed to launch the application.&amp;nbsp;&amp;nbsp; ### For example: &amp;nbsp;&amp;nbsp; #### Linux &amp;nbsp;&amp;nbsp; ```cqtdeployer -bin myApp -qmake /media/D/Qt/5.15.2/gcc_64/bin/qmake -qmlDir . ```&amp;nbsp;&amp;nbsp; #### Windows&amp;nbsp;&amp;nbsp; ``` cqtdeployer -bin myApp.exe -qmake /media/D/Qt/5.12.5/gcc_64/bin/qmake.exe -qmlDir . ```&amp;nbsp;&amp;nbsp; #### Where:&amp;nbsp;&amp;nbsp; * cqtdeployer is a utility call (befor version 1.4 windows version used %cqtdeployer% command).&amp;nbsp;&amp;nbsp; * -bin - the option for transferring the paths of the application executable files.&amp;nbsp;&amp;nbsp; * myApp.exe and myApp - the path to the application executable file itself&amp;nbsp;&amp;nbsp; * -qmake - the option for transferring qmake paths for qt deployment.&amp;nbsp;&amp;nbsp; * -qmlDir - the option for transferring paths to qml files of the application.&amp;nbsp;&amp;nbsp;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

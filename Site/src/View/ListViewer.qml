@@ -21,8 +21,8 @@ ListView {
             source:  (data)? data.bakcBroundPicture: ""
             title: (data)? data.title: ""
             text: (data)? data.sourceText: ""
-            sourceTextPixelSize: Math.max(width * 0.02, 4 * Screen.pixelDensity)
-            headerTextPixelSize: Math.max(width * 0.04, 8 * Screen.pixelDensity)
+            sourceTextPixelSize: Math.max(width * 0.015, 3 * Screen.pixelDensity)
+            headerTextPixelSize: Math.max(width * 0.03, 6 * Screen.pixelDensity)
 
             textMargins: 20
             width: viewPort.width

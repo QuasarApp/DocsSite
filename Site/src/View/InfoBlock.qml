@@ -20,6 +20,7 @@ ViewPortGradientPage {
         id: privatePage
 
         clip: true
+
         TextEdit {
             id: header
             font.bold: true
@@ -35,8 +36,8 @@ ViewPortGradientPage {
 
             anchors.top: parent.top
             anchors.left: parent.left
-            anchors.right: parent.right
             anchors.margins: textMargins
+            width: parent.width / 2
 
             selectByMouse: true
             readOnly: true

@@ -2,7 +2,7 @@
     "bin": [
         "./build/Release/Site.wasm",
         "./build/Release/Site.js",
-        "./src/Wrapper/qtlogo.svg",
+        "./src/Wrapper/quasarapplogo.png",
         "./src/Wrapper/qtloader.js",
         "./src/Wrapper/index.html"
     ],
