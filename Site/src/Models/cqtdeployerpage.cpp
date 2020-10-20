@@ -20,23 +20,13 @@ QString CQtDeployerAbout::data() const {
                 " but also to deploy a project on Linux for Windows and vice versa.\n"
                 "* Fast create installers : Upon completion of the deployment, you will receive a self-contained installer of your distribution.\n"
                 "\n"
-                "## Supported platforms:\n"
-                "* Linux classic\n"
-                "* Linux snap \n"
-                "* Windows \n"
-                "\n"
-                "## Support processors architectures:\n"
-                "* x86 \n"
-                "* x86-64 \n"
-                "* ARM \n"
-                "* ARM64 \n"
                 );
 
     return sourceText;
 }
 
 QString CQtDeployerAbout::title() const {
-    return tr("Deploy any С/С++ application is easy with CQTDeployer");
+    return tr("What is CQDeployer");
 }
 
 QString CQtDeployerAbout::backgroud() const {
@@ -54,7 +44,15 @@ CQtDeployerExamples::CQtDeployerExamples()
 }
 
 QString CQtDeployerExamples::data() const {
-    auto sourceText = tr("The utility transfers the path to the executable files of the deployed programs using the option -bin. The transferred programs are analyzed and get a list of dependencies. If the programs being deployed depend on Qt, then a list of modules is formed based on the dependencies. Qt plugins are deployed depending on the qt modules used. Then qml plugins are copied, if necessary, and standard qt translations. After completing all the steps described, scripts are formed to launch the application.\n"
+    auto sourceText = tr("The utility transfers the path to the executable"
+                         " files of the deployed programs using the option -bin."
+                         " The transferred programs are analyzed and get a list of dependencies."
+                         " If the programs being deployed depend on Qt,"
+                         " then a list of modules is formed based on the dependencies."
+                         " Qt plugins are deployed depending on the qt modules used."
+                         " Then qml plugins are copied, if necessary, and standard qt translations."
+                         " After completing all the steps described,"
+                         " scripts are formed to launch the application.\n"
                          " ### For example: \n"
                          " #### Linux \n"
                          " cqtdeployer -bin myApp -qmake /media/D/Qt/5.15.2/gcc_64/bin/qmake -qmlDir . \n"
@@ -71,7 +69,7 @@ QString CQtDeployerExamples::data() const {
 }
 
 QString CQtDeployerExamples::title() const {
-    return tr("Get started");
+    return tr("Deploy any С/С++ application is easy with CQTDeployer");
 
 }
 
@@ -106,7 +104,10 @@ QString CQtDeployerDocs::backgroud() const {
 }
 
 QList<BaseFront::Link> CQtDeployerDocs::links() const {
-    return {{tr("Full description and documentation"), "https://github.com/QuasarApp/CQtDeployer/wiki"},
-            {tr("Download"), "https://github.com/QuasarApp/CQtDeployer/releases"}};
+    return {{tr("Full description and documentation"),
+                    "https://github.com/QuasarApp/CQtDeployer/wiki"},
+
+            {tr("Download"),
+                    "https://github.com/QuasarApp/CQtDeployer/releases"}};
 
 }

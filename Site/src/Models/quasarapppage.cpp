@@ -7,14 +7,14 @@ QuasarAppPage::QuasarAppPage() {
 QString QuasarAppPage::data() const {
 
     auto sourceText = tr("The **QuasarApp** is developing open source mobile and desktop"
-                         " applications.\n"
+                         " applications.\n\n"
                          "Our company has been created on 2017 year and have"
                          " experians of develepment android and desctop applications and games."
-                         "\n");
+                         "\n\n");
 
     sourceText += tr("During our existence,"
                      " we have accumulated more than 40 software components and ready-made solutions"
-                     " for the most diverse tasks. \n"
+                     " for the most diverse tasks. \n\n"
                      "This approach allows us now to create final products with impressive speed."
                      " If you have an idea for the application, we will hear you."
                      );
@@ -37,12 +37,12 @@ QuasarAppSupportPlatforms::QuasarAppSupportPlatforms()
 }
 
 QString QuasarAppSupportPlatforms::data() const {
-    auto sourceText = tr("At the moment, we can offer support for our solutions for the following platforms:\n");
+    auto sourceText = tr("At the moment, we can offer support for our solutions for the following platforms:\n\n");
 
-    sourceText += tr("* Linux "
-                     "* Windows "
-                     "* Android "
-                     "* Web ");
+    sourceText += tr("* Linux \n"
+                     "* Windows \n"
+                     "* Android \n"
+                     "* Web \n");
 
     return sourceText;
 }
@@ -64,8 +64,8 @@ QasarAppOrder::QasarAppOrder()
 
 QString QasarAppOrder::data() const {
     auto sourceText = tr("We are always happy to help you realize your best and most fantastic ideas."
-                    "\n"
-                    "If you have an idea for the application, then you can leave a request to create a project with us on GitHub. \n"
+                    "\n\n"
+                    "If you have an idea for the application, then you can leave a request to create a project with us on GitHub. \n\n"
                     " All that is required of you is a detailed description of what needs to be done. Further,"
                     " our specialists will decide when work will begin on the project and how much resources will be allocated to the project."
                     "\n\n"

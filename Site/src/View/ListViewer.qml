@@ -25,7 +25,7 @@ ListView {
             headerTextPixelSize: Math.max(width * 0.03, 6 * Screen.pixelDensity)
 
             textMargins: 20
-            width: viewPort.width
+            width: viewPort.width - scroll.width
             viewground: viewgroundItem
             listView: viewPort
             linksCount: (data)? data.linksCount: 0
@@ -34,7 +34,30 @@ ListView {
         }
     }
 
-    spacing: 24
+    header: Component {
+        Item {
+        height: viewPort.height / 3
+    }}
+
+    footer: Component {
+        Item {
+        height: viewPort.height / 3
+    }}
+
+    populate: Transition {
+        NumberAnimation {
+            easing.type: Easing.OutExpo
+            properties: "opacity";
+            duration: 5000
+            from: 0
+            to: 1.0
+        }
+    }
+
+    spacing: Math.max(24, width * 0.15)
+    ScrollBar.vertical: ScrollBar {
+        id: scroll
+    }
 
     Item {
         id: viewgroundItem

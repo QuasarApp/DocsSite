@@ -18,10 +18,9 @@ QString HeartAbout::data() const
               "**QuasarApp Heart** - it is base backend for C++/Qt projects. This library support work with databases and work with lite network requests. \n"
               "## Futures \n"
               "\n "
-              "\n * [YES]Support ssl sockets "
-              "\n * [YES] Support initialize database "
-              "\n * [YES] Support work in database "
-              "\n * [STILL NO] Support decentralized network mode "
+              "\n * Support ssl sockets "
+              "\n * Support initialize database "
+              "\n * Support work in database "
               "\n This library consists of two levels (AbstractNode level and DataBaseNode level)."
               "\n "
               "\n ### AbstractNode level (0) "
@@ -30,7 +29,7 @@ QString HeartAbout::data() const
               "\n For more information see QuasarApp Heart documentation, QH namespace."
               "\n "
               "\n  ### DataBaseNode level (1)"
-              "\n  #### Description"
+              "\n  #### Description \n"
               "The DataBaseNode level implement methods and packages for work with databases."
               " This level using Qt classes for wrking with database.");
 }
@@ -58,8 +57,8 @@ HeartExamples::~HeartExamples() {
 
 QString HeartExamples::data() const {
     return tr(""
-              "QuasarApp Heart - has very detailed examples of how the library works,"
-              " as well as a complete description of all the functions in the official technical documentation. \n"
+              "**QuasarApp Heart** - has very detailed examples of how the library works,"
+              " as well as a complete description of all the functions in the official technical documentation. \n\n"
               " But if you want to get only a short example of how to use it, you can visit the official page on github.");
 }
 

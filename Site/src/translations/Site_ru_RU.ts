@@ -146,8 +146,24 @@ Key differences of this program:
 <context>
     <name>HeartAbout</name>
     <message>
-        <location filename="../Models/heartpage.cpp" line="15"/>
-        <source>QuasarApp Heart - it is base backend for C++/Qt projects. This library support work with databases and work with lite network requests. &lt;br&gt;&lt;br&gt;&lt;h2&gt; Futures &lt;/h2&gt; &lt;br&gt; &lt;br&gt;&lt;br&gt; &lt;br&gt; * [YES]Support ssl sockets &lt;&lt;br&gt; * [YES] Support initialize database &lt;br&gt; * [YES] Support work in database &lt;br&gt; * [STILL NO] Support decentralized network mode &lt;br&gt; This library consists of two levels (AbstractNode level and DataBaseNode level).&lt;br&gt; &lt;br&gt; &lt;h3&gt; AbstractNode level (0) &lt;/h3&gt;&lt;br&gt; &lt;h4&gt; Description &lt;/h4&gt;&lt;br&gt;The AbstractNode level implement only base functions of create a new work threads and parsing packages.&lt;br&gt;For more information see QuasarApp Heart documentation, QH namespace.&lt;br&gt;&lt;br&gt; &lt;h3&gt; DataBaseNode level (1)&lt;/h3&gt;&lt;br&gt; &lt;h4&gt; Description&lt;/h4&gt;The DataBaseNode level implement methods and packages for work with databases. This level using Qt classes for wrking with database, so for more information about suport databases see &lt;a href=&apos;https://doc.qt.io/qt-5/sql-driver.html&apos;&gt;Qt Documentation&lt;/a&gt;.</source>
+        <location filename="../Models/heartpage.cpp" line="17"/>
+        <source>**QuasarApp Heart** - it is base backend for C++/Qt projects. This library support work with databases and work with lite network requests. 
+## Futures 
+
+ 
+ * [YES]Support ssl sockets 
+ * [YES] Support initialize database 
+ * [YES] Support work in database 
+ * [STILL NO] Support decentralized network mode 
+ This library consists of two levels (AbstractNode level and DataBaseNode level).
+ 
+ ### AbstractNode level (0) 
+ #### Description 
+ The AbstractNode level implement only base functions of create a new work threads and parsing packages.
+ For more information see QuasarApp Heart documentation, QH namespace.
+ 
+  ### DataBaseNode level (1)
+  #### DescriptionThe DataBaseNode level implement methods and packages for work with databases. This level using Qt classes for wrking with database.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -159,12 +175,14 @@ Key differences of this program:
 <context>
     <name>HeartDocs</name>
     <message>
-        <location filename="../Models/heartpage.cpp" line="79"/>
-        <source>&lt;br&gt;QuasarApp Heart - if you want get more information see the &lt;a href=&apos;docs/heart/html/index.html&apos;&gt;technical documentation&lt;/a&gt;. &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</source>
+        <location filename="../Models/heartpage.cpp" line="87"/>
+        <source>
+**QuasarApp Heart** - if you want get more information see technical documentation.
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/heartpage.cpp" line="86"/>
+        <location filename="../Models/heartpage.cpp" line="94"/>
         <source>Doxygen Technical Documentation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -172,12 +190,13 @@ Key differences of this program:
 <context>
     <name>HeartExamples</name>
     <message>
-        <location filename="../Models/heartpage.cpp" line="56"/>
-        <source>&lt;br&gt;QuasarApp Heart - has very detailed examples of how the library works, as well as a complete description of all the functions in the official technical documentation. &lt;br&gt;&lt;br&gt; But if you want to get only a short example of how to use it, you can visit the official page on &lt;a href=&apos;https://github.com/QuasarApp/Heart&apos;&gt;github&lt;/a&gt;.&lt;br&gt;&lt;br&gt;</source>
+        <location filename="../Models/heartpage.cpp" line="60"/>
+        <source>QuasarApp Heart - has very detailed examples of how the library works, as well as a complete description of all the functions in the official technical documentation. 
+ But if you want to get only a short example of how to use it, you can visit the official page on github.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/heartpage.cpp" line="63"/>
+        <location filename="../Models/heartpage.cpp" line="67"/>
         <source>Examples of QuasarApp Heart</source>
         <translation type="unfinished"></translation>
     </message>
@@ -238,9 +257,19 @@ Key differences of this program:
 <context>
     <name>QasarAppOrder</name>
     <message>
-        <location filename="../Models/quasarapppage.cpp" line="66"/>
         <source>We are always happy to help you realize your best and most fantastic ideas.&lt;br&gt;&lt;br&gt;If you have an idea for the application, then you can leave a request to create a project with us on GitHub. All that is required of you is a detailed description of what needs to be done. Further, our specialists will decide when work will begin on the project and how much resources will be allocated to the project.&lt;br&gt;&lt;br&gt;That how many resources will be allocated for the development depends on how much this project will collect cash donations.&lt;br&gt;&lt;br&gt;You can also request a private project exclusively for you, but such a project can no longer be free.</source>
-        <translation type="unfinished">Мы всегда рады помочь вам реализовать ваши лучшие и самые фантастические идеи. &lt;br&gt; &lt;br&gt; Если у вас есть идея для приложения, вы можете оставить заявку на создание проекта у нас на GitHub. Все, что от вас требуется, - это подробное описание того, что нужно сделать. Далее наши специалисты решат, когда начнется работа над проектом и сколько ресурсов будет выделено для проекта. &lt;br&gt; &lt;br&gt; То, сколько ресурсов будет выделено на разработку, зависит от того, сколько этот проект собирет денежными пожертвованиями. . &lt;br&gt; &lt;br&gt; Вы также можете запросить частный проект исключительно для вас, но такой проект больше не может быть бесплатным.</translation>
+        <translation type="obsolete">Мы всегда рады помочь вам реализовать ваши лучшие и самые фантастические идеи. &lt;br&gt; &lt;br&gt; Если у вас есть идея для приложения, вы можете оставить заявку на создание проекта у нас на GitHub. Все, что от вас требуется, - это подробное описание того, что нужно сделать. Далее наши специалисты решат, когда начнется работа над проектом и сколько ресурсов будет выделено для проекта. &lt;br&gt; &lt;br&gt; То, сколько ресурсов будет выделено на разработку, зависит от того, сколько этот проект собирет денежными пожертвованиями. . &lt;br&gt; &lt;br&gt; Вы также можете запросить частный проект исключительно для вас, но такой проект больше не может быть бесплатным.</translation>
+    </message>
+    <message>
+        <location filename="../Models/quasarapppage.cpp" line="66"/>
+        <source>We are always happy to help you realize your best and most fantastic ideas.
+If you have an idea for the application, then you can leave a request to create a project with us on GitHub. 
+ All that is required of you is a detailed description of what needs to be done. Further, our specialists will decide when work will begin on the project and how much resources will be allocated to the project.
+
+That how many resources will be allocated for the development depends on how much this project will collect cash donations.
+
+You can also request a private project exclusively for you, but such a project can no longer be free.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Models/quasarapppage.cpp" line="80"/>
@@ -251,14 +280,21 @@ Key differences of this program:
 <context>
     <name>QuasarAppPage</name>
     <message>
+        <source>During our existence, we have accumulated more than 40 software components and ready-made solutions for the most diverse tasks.&lt;br&gt;This approach allows us now to create final products with impressive speed. If you have an idea for the application, we will hear you.</source>
+        <translation type="obsolete">За время нашего существования мы накопили более 40 программных компонентов и готовых решений для самых разных задач. &lt;br&gt; Такой подход позволяет нам  создавать с максимальной скоростью конечные продукты. Если у вас есть идея для приложения, мы с радостью воплотим ее в жизнь.</translation>
+    </message>
+    <message>
         <location filename="../Models/quasarapppage.cpp" line="9"/>
-        <source>The &lt;b&gt;QuasarApp&lt;/b&gt; is developing open source mobile and desktop applications.&lt;br&gt;&lt;br&gt;Our company has been created on 2017 year and have experians of develepment android and desctop applications and games.&lt;br&gt;&lt;br&gt;</source>
+        <source>The **QuasarApp** is developing open source mobile and desktop applications.
+Our company has been created on 2017 year and have experians of develepment android and desctop applications and games.
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Models/quasarapppage.cpp" line="15"/>
-        <source>During our existence, we have accumulated more than 40 software components and ready-made solutions for the most diverse tasks.&lt;br&gt;This approach allows us now to create final products with impressive speed. If you have an idea for the application, we will hear you.</source>
-        <translation type="unfinished">За время нашего существования мы накопили более 40 программных компонентов и готовых решений для самых разных задач. &lt;br&gt; Такой подход позволяет нам  создавать с максимальной скоростью конечные продукты. Если у вас есть идея для приложения, мы с радостью воплотим ее в жизнь.</translation>
+        <source>During our existence, we have accumulated more than 40 software components and ready-made solutions for the most diverse tasks. 
+This approach allows us now to create final products with impressive speed. If you have an idea for the application, we will hear you.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Models/quasarapppage.cpp" line="25"/>
@@ -269,13 +305,18 @@ Key differences of this program:
 <context>
     <name>QuasarAppSupportPlatforms</name>
     <message>
-        <location filename="../Models/quasarapppage.cpp" line="40"/>
         <source>At the moment, we can offer support for our solutions for the following platforms:&lt;br&gt;&lt;br&gt;</source>
-        <translation type="unfinished">На данный момент мы можем предложить поддержку наших решений для следующих платформ: &lt;br&gt; &lt;br&gt;</translation>
+        <translation type="obsolete">На данный момент мы можем предложить поддержку наших решений для следующих платформ: &lt;br&gt; &lt;br&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Models/quasarapppage.cpp" line="40"/>
+        <source>At the moment, we can offer support for our solutions for the following platforms:
+</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Models/quasarapppage.cpp" line="42"/>
-        <source>- &lt;i&gt; Linux &lt;/i&gt;&lt;br&gt;- &lt;i&gt; Windows &lt;/i&gt;&lt;br&gt;- &lt;i&gt; Android &lt;/i&gt;&lt;br&gt;- &lt;i&gt; Web &lt;/i&gt;</source>
+        <source>* Linux * Windows * Android * Web </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
