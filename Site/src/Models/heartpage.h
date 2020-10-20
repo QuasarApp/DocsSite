@@ -14,6 +14,7 @@ public:
     QString data() const override;
     QString title() const override;
     QString backgroud() const override;
+    QList<BaseFront::Link> links() const override;
 };
 
 class HeartExamples: public AbstractPage
@@ -27,6 +28,8 @@ public:
     QString data() const override;
     QString title() const override;
     QString backgroud() const override;
+    QList<BaseFront::Link> links() const override;
+
 };
 
 class HeartDocs: public AbstractPage
@@ -40,5 +43,7 @@ public:
     QString data() const override;
     QString title() const override;
     QString backgroud() const override;
+    QList<BaseFront::Link> links() const override;
+
 };
 #endif // HEARTPAGE_H
