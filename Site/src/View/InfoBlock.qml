@@ -67,9 +67,9 @@ ViewPortGradientPage {
                 verticalAlignment: Text.AlignVCenter
                 text: root.text
                 color: fontColor
-                readOnly: true
+                readOnly: false
                 selectByMouse: true
-                textFormat: TextEdit.MarkdownText
+                textFormat: TextEdit.RichText
 
                 wrapMode: Text.WordWrap
 

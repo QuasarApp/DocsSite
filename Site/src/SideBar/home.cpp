@@ -14,7 +14,7 @@ QString Home::title() const {
 }
 
 QString Home::backgroud() const {
-    return resourcesPath() + "/quasarapp_banner.png";
+    return resourcesPath() + "/quasarappBanner.png";
 }
 
 QString Home::projectName() const {

@@ -29,26 +29,16 @@ Key differences of this program:
 * Crossdeploy: this application&apos;s support windows and linux distrebutives, This means that you can use it not only to deploy a project for your platform, but also to deploy a project on Linux for Windows and vice versa.
 * Fast create installers : Upon completion of the deployment, you will receive a self-contained installer of your distribution.
 
-## Supported platforms:
-* Linux classic
-* Linux snap 
-* Windows 
-
-## Support processors architectures:
-* x86 
-* x86-64 
-* ARM 
-* ARM64 
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="39"/>
-        <source>Deploy any С/С++ application is easy with CQTDeployer</source>
+        <location filename="../Models/cqtdeployerpage.cpp" line="29"/>
+        <source>What is CQDeployer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="47"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="37"/>
         <source>get more information</source>
         <translation type="unfinished"></translation>
     </message>
@@ -56,18 +46,18 @@ Key differences of this program:
 <context>
     <name>CQtDeployerDocs</name>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="93"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="91"/>
         <source>The source code for CQtDeployer components is provided under Gplv3 licenses and is freely available on GitHub. 
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="100"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="98"/>
         <source>More Inforamtions About CQtDeployer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="109"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="107"/>
         <source>Full description and documentation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -80,7 +70,7 @@ Key differences of this program:
 <context>
     <name>CQtDeployerExamples</name>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="57"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="47"/>
         <source>The utility transfers the path to the executable files of the deployed programs using the option -bin. The transferred programs are analyzed and get a list of dependencies. If the programs being deployed depend on Qt, then a list of modules is formed based on the dependencies. Qt plugins are deployed depending on the qt modules used. Then qml plugins are copied, if necessary, and standard qt translations. After completing all the steps described, scripts are formed to launch the application.
  ### For example: 
  #### Linux 
@@ -97,12 +87,12 @@ Key differences of this program:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="74"/>
-        <source>Get started</source>
+        <location filename="../Models/cqtdeployerpage.cpp" line="72"/>
+        <source>Deploy any С/С++ application is easy with CQTDeployer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/cqtdeployerpage.cpp" line="84"/>
+        <location filename="../Models/cqtdeployerpage.cpp" line="82"/>
         <source>more exampless</source>
         <translation type="unfinished"></translation>
     </message>
@@ -151,10 +141,9 @@ Key differences of this program:
 ## Futures 
 
  
- * [YES]Support ssl sockets 
- * [YES] Support initialize database 
- * [YES] Support work in database 
- * [STILL NO] Support decentralized network mode 
+ * Support ssl sockets 
+ * Support initialize database 
+ * Support work in database 
  This library consists of two levels (AbstractNode level and DataBaseNode level).
  
  ### AbstractNode level (0) 
@@ -163,11 +152,12 @@ Key differences of this program:
  For more information see QuasarApp Heart documentation, QH namespace.
  
   ### DataBaseNode level (1)
-  #### DescriptionThe DataBaseNode level implement methods and packages for work with databases. This level using Qt classes for wrking with database.</source>
+  #### Description 
+The DataBaseNode level implement methods and packages for work with databases. This level using Qt classes for wrking with database.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/heartpage.cpp" line="39"/>
+        <location filename="../Models/heartpage.cpp" line="38"/>
         <source>About QuasarApp Heart</source>
         <translation type="unfinished"></translation>
     </message>
@@ -175,14 +165,14 @@ Key differences of this program:
 <context>
     <name>HeartDocs</name>
     <message>
-        <location filename="../Models/heartpage.cpp" line="87"/>
+        <location filename="../Models/heartpage.cpp" line="86"/>
         <source>
 **QuasarApp Heart** - if you want get more information see technical documentation.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/heartpage.cpp" line="94"/>
+        <location filename="../Models/heartpage.cpp" line="93"/>
         <source>Doxygen Technical Documentation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -190,13 +180,14 @@ Key differences of this program:
 <context>
     <name>HeartExamples</name>
     <message>
-        <location filename="../Models/heartpage.cpp" line="60"/>
-        <source>QuasarApp Heart - has very detailed examples of how the library works, as well as a complete description of all the functions in the official technical documentation. 
+        <location filename="../Models/heartpage.cpp" line="59"/>
+        <source>**QuasarApp Heart** - has very detailed examples of how the library works, as well as a complete description of all the functions in the official technical documentation. 
+
  But if you want to get only a short example of how to use it, you can visit the official page on github.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Models/heartpage.cpp" line="67"/>
+        <location filename="../Models/heartpage.cpp" line="66"/>
         <source>Examples of QuasarApp Heart</source>
         <translation type="unfinished"></translation>
     </message>
@@ -263,7 +254,9 @@ Key differences of this program:
     <message>
         <location filename="../Models/quasarapppage.cpp" line="66"/>
         <source>We are always happy to help you realize your best and most fantastic ideas.
+
 If you have an idea for the application, then you can leave a request to create a project with us on GitHub. 
+
  All that is required of you is a detailed description of what needs to be done. Further, our specialists will decide when work will begin on the project and how much resources will be allocated to the project.
 
 That how many resources will be allocated for the development depends on how much this project will collect cash donations.
@@ -286,13 +279,16 @@ You can also request a private project exclusively for you, but such a project c
     <message>
         <location filename="../Models/quasarapppage.cpp" line="9"/>
         <source>The **QuasarApp** is developing open source mobile and desktop applications.
+
 Our company has been created on 2017 year and have experians of develepment android and desctop applications and games.
+
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Models/quasarapppage.cpp" line="15"/>
         <source>During our existence, we have accumulated more than 40 software components and ready-made solutions for the most diverse tasks. 
+
 This approach allows us now to create final products with impressive speed. If you have an idea for the application, we will hear you.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -311,12 +307,17 @@ This approach allows us now to create final products with impressive speed. If y
     <message>
         <location filename="../Models/quasarapppage.cpp" line="40"/>
         <source>At the moment, we can offer support for our solutions for the following platforms:
+
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Models/quasarapppage.cpp" line="42"/>
-        <source>* Linux * Windows * Android * Web </source>
+        <source>* Linux 
+* Windows 
+* Android 
+* Web 
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -15,23 +15,14 @@ HeartAbout::~HeartAbout() {
 QString HeartAbout::data() const
 {
     return tr(""
-              "**QuasarApp Heart** - it is base backend for C++/Qt projects. This library support work with databases and work with lite network requests. \n"
-              "## Futures \n"
-              "\n "
-              "\n * Support ssl sockets "
-              "\n * Support initialize database "
-              "\n * Support work in database "
-              "\n This library consists of two levels (AbstractNode level and DataBaseNode level)."
-              "\n "
-              "\n ### AbstractNode level (0) "
-              "\n #### Description "
-              "\n The AbstractNode level implement only base functions of create a new work threads and parsing packages."
-              "\n For more information see QuasarApp Heart documentation, QH namespace."
-              "\n "
-              "\n  ### DataBaseNode level (1)"
-              "\n  #### Description \n"
-              "The DataBaseNode level implement methods and packages for work with databases."
-              " This level using Qt classes for wrking with database.");
+              "<b>QuasarApp Heart</b> - it is base backend for C++/Qt projects. This library support work with databases and work with lite network requests. <br><br>"
+              "<h2> Futures </h2><br>"
+              "<br> "
+              " * Support ssl sockets <br>"
+              " * Support initialize database <br>"
+              " * Support work in database <br><br>"
+              " This library consists of two levels (AbstractNode level and DataBaseNode level).<br>"
+              " <br>");
 }
 
 QString HeartAbout::title() const {
@@ -57,8 +48,8 @@ HeartExamples::~HeartExamples() {
 
 QString HeartExamples::data() const {
     return tr(""
-              "**QuasarApp Heart** - has very detailed examples of how the library works,"
-              " as well as a complete description of all the functions in the official technical documentation. \n\n"
+              "<b>QuasarApp Heart</b> - has very detailed examples of how the library works,"
+              " as well as a complete description of all the functions in the official technical documentation. <br><br>"
               " But if you want to get only a short example of how to use it, you can visit the official page on github.");
 }
 
@@ -83,9 +74,9 @@ HeartDocs::~HeartDocs() {
 }
 
 QString HeartDocs::data() const {
-    return tr("\n"
+    return tr("<br><br>"
               "**QuasarApp Heart** - if you want get more information see technical documentation."
-              "\n"
+              "<br><br>"
               );
 }
 
@@ -98,6 +89,6 @@ QString HeartDocs::backgroud() const {
 }
 
 QList<BaseFront::Link> HeartDocs::links() const {
-    return {{"technical documentation", "docs/heart/html/index.html"}};
+    return {{"technical documentation", "https://quasarapp.ddns.net/docs/heart/html/index.html"}};
 
 }

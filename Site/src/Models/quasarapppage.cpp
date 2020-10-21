@@ -6,15 +6,15 @@ QuasarAppPage::QuasarAppPage() {
 
 QString QuasarAppPage::data() const {
 
-    auto sourceText = tr("The **QuasarApp** is developing open source mobile and desktop"
-                         " applications.\n\n"
+    auto sourceText = tr("The <b>QuasarApp</b> is developing open source mobile and desktop"
+                         " applications.<br><br>"
                          "Our company has been created on 2017 year and have"
                          " experians of develepment android and desctop applications and games."
-                         "\n\n");
+                         "<br><br>");
 
     sourceText += tr("During our existence,"
                      " we have accumulated more than 40 software components and ready-made solutions"
-                     " for the most diverse tasks. \n\n"
+                     " for the most diverse tasks. <br><br>"
                      "This approach allows us now to create final products with impressive speed."
                      " If you have an idea for the application, we will hear you."
                      );
@@ -37,12 +37,12 @@ QuasarAppSupportPlatforms::QuasarAppSupportPlatforms()
 }
 
 QString QuasarAppSupportPlatforms::data() const {
-    auto sourceText = tr("At the moment, we can offer support for our solutions for the following platforms:\n\n");
+    auto sourceText = tr("At the moment, we can offer support for our solutions for the following platforms:<br><br>");
 
-    sourceText += tr("* Linux \n"
-                     "* Windows \n"
-                     "* Android \n"
-                     "* Web \n");
+    sourceText += tr("* Linux <br>"
+                     "* Windows <br>"
+                     "* Android <br>"
+                     "* Web (Wasm) <br>");
 
     return sourceText;
 }
@@ -64,13 +64,13 @@ QasarAppOrder::QasarAppOrder()
 
 QString QasarAppOrder::data() const {
     auto sourceText = tr("We are always happy to help you realize your best and most fantastic ideas."
-                    "\n\n"
-                    "If you have an idea for the application, then you can leave a request to create a project with us on GitHub. \n\n"
+                    "<br><br>"
+                    "If you have an idea for the application, then you can leave a request to create a project with us on GitHub. <br><br>"
                     " All that is required of you is a detailed description of what needs to be done. Further,"
                     " our specialists will decide when work will begin on the project and how much resources will be allocated to the project."
-                    "\n\n"
+                    "<br><br>"
                     "That how many resources will be allocated for the development depends on how much this project will collect cash donations."
-                    "\n\n"
+                    "<br><br>"
                     "You can also request a private project exclusively for you, but such a project can no longer be free.");
 
     return sourceText;
